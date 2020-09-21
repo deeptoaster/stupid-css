@@ -3,7 +3,7 @@ body {
   background-color: #161819;
   color: #617078;
   text-align: center;
-  font: 20px/1.5 'Titillium Web', sans-serif;
+  font: 7px/1.5 'Titillium Web', sans-serif;
 }
 h1 {
   height: 1em;
@@ -176,6 +176,26 @@ h3 {
 .modal-actions .button {
   float: right;
   margin: 1em 0.5em;
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 9px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  body {
+    font-size: 21px;
+  }
 }
 @keyframes scroll {
   0% {
