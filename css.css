@@ -2,13 +2,45 @@ body {
   margin: 0;
   background-color: #161819;
   color: #617078;
+  text-align: center;
   font: 20px/1.5 'Titillium Web', sans-serif;
 }
-button, .double-click-button a {
+h1 {
+  height: 1em;
+  margin: 0.5em 0;
+  font-size: 3em;
+  line-height: 1;
+  white-space: nowrap;
+}
+h2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.5em;
+  background-color: #30383b;
+  font-size: 1em;
+}
+h3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.6em;
+  background-color: #d4c26a;
+  color: #806d15;
+  font-size: 1.6em;
+  line-height: 1;
+}
+.button, .double-click-button a {
   color: #3d484c;
   text-decoration: none;
 }
-button {
+.button {
+  display: inline-block;
+  margin: 1em;
   border: 0.1em solid #444f55;
   border-radius: 0.3em;
   padding: 0.5em;
@@ -17,19 +49,35 @@ button {
   line-height: 1;
   font-weight: bold;
   cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
-button:hover {
+.button:hover {
   background-color: #6f828b;
 }
-button:active {
+.button:active {
   background-color: #546269;
 }
+.demos {
+  width: 80em;
+  margin: auto;
+}
 .demo {
-  background-color: #30383b;
+  position: relative;
+  float: left;
+  width: 18em;
+  height: 8em;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #232627;
+}
+#modal.demo {
+  z-index: 1;
 }
 .double-click-button {
   padding: 0;
-  line-height: 2;
 }
 .double-click-button a, .double-click-button span {
   display: block;
@@ -52,17 +100,25 @@ button:active {
   position: relative;
   left: 0;
   width: 100%;
-  overflow: hidden;
+}
+.double-click-buffer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   clip: rect(0, auto, auto, 0);
   clip-path: inset(0);
 }
 .double-click-label {
   position: fixed;
-  top: 9.3em;
-  left: 0.1em;
+  top: 8.1em;
+  right: 50%;
   width: 8em;
   height: 2em;
+  margin-right: 26em;
   text-align: center;
+  line-height: 2;
 }
 .double-click-anchor {
   position: relative;
@@ -74,11 +130,58 @@ button:active {
   width: 100%;
   height: 80000em;
 }
+.modal-button {
+  width: 8em;
+}
+.modal-toggle {
+  display: none;
+}
+.modal-dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.modal-toggle:checked + .modal-dialog {
+  display: block;
+}
+.modal-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.7;
+}
+.modal-content {
+  position: relative;
+  width: 40em;
+  margin: 4em auto;
+  padding: 4em 1em 6em 1em;
+  background-color: #eee;
+  color: #222;
+  text-align: left;
+}
+.modal-actions {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 0.5em;
+  background-color: #546269;
+}
+.modal-actions .button {
+  float: right;
+  margin: 1em 0.5em;
+}
 @keyframes scroll {
   0% {
     top: 0;
   }
   100% {
-    top: -240040em;
+    top: -240004em;
   }
 }
