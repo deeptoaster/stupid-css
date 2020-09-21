@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  background-color: #161819;
+  color: #617078;
+  font: 20px/1.5 'Titillium Web', sans-serif;
+}
+button, .double-click-button a {
+  color: #3d484c;
+  text-decoration: none;
+}
+button {
+  border: 0.1em solid #444f55;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  background-color: #617078;
+  font-size: 1em;
+  line-height: 1;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #6f828b;
+}
+button:active {
+  background-color: #546269;
+}
+.demo {
+  background-color: #30383b;
+}
+.double-click-button {
+  padding: 0;
+  line-height: 2;
+}
+.double-click-button a, .double-click-button span {
+  display: block;
+}
+.double-click-container {
+  position: relative;
+  width: 8em;
+  height: 2em;
+  overflow: hidden;
+}
+.double-click-scroll {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  animation-name: scroll;
+  animation-duration: 3600s;
+  animation-timing-function: linear;
+}
+.double-click-option {
+  position: relative;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  clip: rect(0, auto, auto, 0);
+  clip-path: inset(0);
+}
+.double-click-label {
+  position: fixed;
+  top: 9.3em;
+  left: 0.1em;
+  width: 8em;
+  height: 2em;
+  text-align: center;
+}
+.double-click-anchor {
+  position: relative;
+  width: 100%;
+  height: 20em;
+}
+.double-click-filler {
+  position: relative;
+  width: 100%;
+  height: 80000em;
+}
+@keyframes scroll {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -240040em;
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Stupid CSS</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:800%7CTitillium+Web:400,700" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css.css" />
+	</head>
+  <body>
+    <div class="header">
+      <h1>This page contains no JavaScript or images.</h1>
+    </div>
+    <div class="demo">
+      <h2>Double-Click Handler</h2>
+      <button class="double-click-button">
+        <span class="double-click-container">
+          <span class="double-click-scroll">
+            <span class="double-click-option">
+              <span class="double-click-label">Click Fast</span>
+              <a class="double-click-filler" href="#single-click"></a>
+            </span>
+            <span class="double-click-option">
+              <span class="double-click-label">Single-Clicked</span>
+              <a id="single-click" class="double-click-anchor" href="#double-click"></a>
+              <a class="double-click-filler" href="#single-click"></a>
+            </span>
+            <span class="double-click-option">
+              <span class="double-click-label">Double-Clicked</span>
+              <a id="double-click" class="double-click-anchor" href="#double-click"></a>
+              <a class="double-click-filler" href="#single-click"></a>
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </body>
+</html>
