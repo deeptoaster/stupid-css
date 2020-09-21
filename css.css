@@ -29,8 +29,7 @@ h3 {
   left: 0;
   margin: 0;
   padding: 0.6em;
-  background-color: #d4c26a;
-  color: #806d15;
+  background-color: #617078;
   font-size: 1.6em;
   line-height: 1;
 }
@@ -61,19 +60,33 @@ h3 {
   background-color: #546269;
 }
 .demos {
-  width: 80em;
+  width: 81em;
   margin: auto;
+  padding-left: 0.5em;
+}
+.demo-float {
+  float: left;
+}
+.demo-clear {
+  clear: left;
 }
 .demo {
+  padding: 0.5em;
+}
+.demo-content {
   position: relative;
-  float: left;
   width: 18em;
   height: 8em;
-  margin: 0.5em;
   padding: 0.5em;
-  background-color: #232627;
+  background-color: #22282a;
 }
-#modal.demo {
+.demo.demo-2x1 .demo-content, .demo.demo-2x2 .demo-content {
+  height: 18em;
+}
+.demo.demo-1x2 .demo-content, .demo.demo-2x2 .demo-content {
+  width: 38em;
+}
+#modal.demo .demo-content {
   z-index: 1;
 }
 .double-click-button {
@@ -94,6 +107,7 @@ h3 {
   width: 100%;
   animation-name: scroll;
   animation-duration: 3600s;
+  animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 .double-click-option {
@@ -116,7 +130,7 @@ h3 {
   right: 50%;
   width: 8em;
   height: 2em;
-  margin-right: 26em;
+  margin-right: 26.25em;
   text-align: center;
   line-height: 2;
 }
@@ -161,8 +175,8 @@ h3 {
   width: 40em;
   margin: 4em auto;
   padding: 4em 1em 6em 1em;
-  background-color: #eee;
-  color: #222;
+  background-color: #6f828b;
+  color: #3d484c;
   text-align: left;
 }
 .modal-actions {

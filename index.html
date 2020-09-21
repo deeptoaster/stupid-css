@@ -9,61 +9,77 @@
   <body>
     <h1>This page contains no JavaScript or images.</h1>
     <div class="demos">
-      <div class="demo">
-        <h2>Double-Click Handler</h2>
-        <span class="button double-click-button">
-          <span class="double-click-container">
-            <span class="double-click-scroll">
-              <span class="double-click-option">
-                <span class="double-click-buffer">
-                  <span class="double-click-label">Click Fast</span>
+      <div class="demo-float">
+        <div class="demo">
+          <div class="demo-content">
+            <h2>Double-Click Handler</h2>
+            <span class="button double-click-button">
+              <span class="double-click-container">
+                <span class="double-click-scroll">
+                  <span class="double-click-option">
+                    <span class="double-click-buffer">
+                      <span class="double-click-label">Click Fast</span>
+                    </span>
+                    <a class="double-click-filler" href="#single-click"></a>
+                  </span>
+                  <span class="double-click-option">
+                    <span class="double-click-buffer">
+                      <span class="double-click-label">Single-Clicked</span>
+                    </span>
+                    <a id="single-click" class="double-click-anchor" href="#double-click"></a>
+                    <a class="double-click-filler" href="#single-click"></a>
+                  </span>
+                  <span class="double-click-option">
+                    <span class="double-click-buffer">
+                      <span class="double-click-label">Double-Clicked</span>
+                    </span>
+                    <a id="double-click" class="double-click-anchor" href="#double-click"></a>
+                    <a class="double-click-filler" href="#single-click"></a>
+                  </span>
                 </span>
-                <a class="double-click-filler" href="#single-click"></a>
-              </span>
-              <span class="double-click-option">
-                <span class="double-click-buffer">
-                  <span class="double-click-label">Single-Clicked</span>
-                </span>
-                <a id="single-click" class="double-click-anchor" href="#double-click"></a>
-                <a class="double-click-filler" href="#single-click"></a>
-              </span>
-              <span class="double-click-option">
-                <span class="double-click-buffer">
-                  <span class="double-click-label">Double-Clicked</span>
-                </span>
-                <a id="double-click" class="double-click-anchor" href="#double-click"></a>
-                <a class="double-click-filler" href="#single-click"></a>
               </span>
             </span>
-          </span>
-        </span>
+          </div>
+        </div>
+        <div class="demo demo-2x1">
+          <div class="demo-content">
+            <h2>Timer</h2>
+          </div>
+        </div>
       </div>
-      <div id="modal" class="demo">
-        <h2>Modal Dialog</h2>
-        <label class="button modal-button" for="modal-toggle">Open Dialog</label>
-        <input id="modal-toggle" class="modal-toggle" type="checkbox" />
-        <div class="modal-dialog">
-          <label class="modal-background" for="modal-toggle"></label>
-          <div class="modal-content">
-            <h3>Speaking Latin</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div class="modal-actions">
-              <label class="button" for="modal-toggle">OK</label>
-              <label class="button" for="modal-toggle">Cancel</label>
+      <div class="demo demo-float demo-2x1">
+        <div class="demo-content">
+          <h2>Oregon Trail</h2>
+        </div>
+      </div>
+      <div class="demo demo-float demo-2x2">
+        <div class="demo-content">
+          <h2>File Browser</h2>
+        </div>
+      </div>
+      <div class="demo demo-float demo-1x2">
+        <div class="demo-content">
+          <h2>Whac-A-Mole</h2>
+        </div>
+      </div>
+      <div id="modal" class="demo demo-float">
+        <div class="demo-content">
+          <h2>Modal Dialog</h2>
+          <label class="button modal-button" for="modal-toggle">Open Dialog</label>
+          <input id="modal-toggle" class="modal-toggle" type="checkbox" />
+          <div class="modal-dialog">
+            <label class="modal-background" for="modal-toggle"></label>
+            <div class="modal-content">
+              <h3>Speaking Latin</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <div class="modal-actions">
+                <label class="button" for="modal-toggle">OK</label>
+                <label class="button" for="modal-toggle">Cancel</label>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="demo"></div>
-      <div class="demo"></div>
-      <div class="demo"></div>
-      <div class="demo"></div>
-      <div class="demo"></div>
-      <div class="demo"></div>
-      <div class="demo"></div>
-      <div class="demo"></div>
-      <div class="demo"></div>
-      <div class="demo"></div>
     </div>
   </body>
 </html>
