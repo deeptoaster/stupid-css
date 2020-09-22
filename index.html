@@ -52,9 +52,71 @@
           <h2>Oregon Trail</h2>
         </div>
       </div>
-      <div class="demo demo-float demo-2x2">
+      <div id="browser" class="demo demo-float demo-2x2">
         <div class="demo-content">
           <h2>File Browser</h2>
+          <div class="browser-sidebar">
+            <h3>Devices</h3>
+            <a href="#/">File System</a>
+            <h3>Places</h3>
+            <a href="#/home/azurediamond">azurediamond</a>
+            <a href="#/home/azurediamond/Desktop">Desktop</a>
+            <a href="#trash:///">Trash</a>
+            <a href="#/home/azurediamond/Documents">Documents</a>
+            <a href="#/home/azurediamond/Downloads">Downloads</a>
+            <h3>Network</h3>
+            <a href="#network:///">Browse Network</a>
+          </div>
+          <div class="browser-content">
+            <div>
+              <div class="browser-directory">
+                <a class="browser-anchor" name="/"></a>
+                <div class="browser-sidebar">
+                  <h3></h3>
+                  <a class="active" href="#/">File System</a>
+                </div>
+                <div class="browser-listing">
+                  <a class="browser-listing-directory">boot</a>
+                  <a class="browser-listing-directory">dev</a>
+                  <a class="browser-listing-directory">etc</a>
+                  <input id="home" class="browser-directory-toggle" type="checkbox" />
+                  <label class="browser-directory-arrow" for="home"></label>
+                  <a class="browser-listing-directory">home</a>
+                  <div class="browser-directory-folder">
+                    <input id="home-azurediamond" class="browser-directory-toggle" type="checkbox" />
+                    <label class="browser-directory-arrow" for="home-azurediamond"></label>
+                    <a class="browser-listing-directory">azurediamond</a>
+                    <div class="browser-directory-folder">
+                      <a class="browser-listing-directory">Desktop</a>
+                      <a class="browser-listing-directory">Documents</a>
+                      <a class="browser-listing-directory">Downloads</a>
+                    </div>
+                  </div>
+                  <a class="browser-listing-directory">mnt</a>
+                  <a class="browser-listing-directory">opt</a>
+                  <a class="browser-listing-directory">proc</a>
+                  <a class="browser-listing-directory">tmp</a>
+                  <a class="browser-listing-directory">usr</a>
+                  <a class="browser-listing-directory">var</a>
+                </div>
+              </div>
+              <div class="browser-directory">
+                <a class="browser-anchor" name="/home/azurediamond"></a>
+                <div class="browser-sidebar">
+                  <h3></h3>
+                  <a></a>
+                  <h3></h3>
+                  <a class="active" href="#/home/azurediamond">azurediamond</a>
+                </div>
+                <div class="browser-listing">
+                  <a class="browser-listing-directory">Desktop</a>
+                  <a class="browser-listing-directory">Documents</a>
+                  <a class="browser-listing-directory">Downloads</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="browser-pane"></div>
         </div>
       </div>
       <div class="demo demo-float demo-1x2">

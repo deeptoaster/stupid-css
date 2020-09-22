@@ -3,7 +3,7 @@ body {
   background-color: #161819;
   color: #617078;
   text-align: center;
-  font: 7px/1.5 'Titillium Web', sans-serif;
+  font: 12px/1.5 'Titillium Web', sans-serif;
 }
 h1 {
   height: 1em;
@@ -14,24 +14,13 @@ h1 {
 }
 h2 {
   position: absolute;
-  right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
   margin: 0;
-  padding: 0.5em;
+  padding: 0.5em 0;
   background-color: #30383b;
   font-size: 1em;
-}
-h3 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin: 0;
-  padding: 0.6em;
-  background-color: #617078;
-  font-size: 1.6em;
-  line-height: 1;
 }
 .button, .double-click-button a {
   color: #3d484c;
@@ -39,7 +28,6 @@ h3 {
 }
 .button {
   display: inline-block;
-  margin: 1em;
   border: 0.1em solid #444f55;
   border-radius: 0.3em;
   padding: 0.5em;
@@ -75,9 +63,8 @@ h3 {
 }
 .demo-content {
   position: relative;
-  width: 18em;
-  height: 8em;
-  padding: 0.5em;
+  width: 19em;
+  height: 9em;
   background-color: #22282a;
 }
 .demo.demo-2x1 .demo-content, .demo.demo-2x2 .demo-content {
@@ -86,10 +73,8 @@ h3 {
 .demo.demo-1x2 .demo-content, .demo.demo-2x2 .demo-content {
   width: 38em;
 }
-#modal.demo .demo-content {
-  z-index: 1;
-}
 .double-click-button {
+  margin: 2em;
   padding: 0;
 }
 .double-click-button a, .double-click-button span {
@@ -126,7 +111,7 @@ h3 {
 }
 .double-click-label {
   position: fixed;
-  top: 8.1em;
+  top: 8.6em;
   right: 50%;
   width: 8em;
   height: 2em;
@@ -144,8 +129,130 @@ h3 {
   width: 100%;
   height: 80000em;
 }
+.browser-sidebar, .browser-content, .browser-directory, .browser-pane {
+  height: 19.375em;
+}
+.browser-sidebar, .browser-content, .browser-pane, .browser-sidebar a {
+  color: #22282a;
+}
+.browser-sidebar, .browser-content, .browser-pane {
+  font-size: 0.8em;
+}
+.browser-sidebar, .browser-content {
+  text-align: left;
+  line-height: 1.8;
+}
+.browser-sidebar, .browser-pane {
+  position: absolute;
+  top: 0;
+}
+.browser-sidebar {
+  left: 0;
+  z-index: 1;
+  width: 10em;
+  background-color: #546269;
+}
+.browser-sidebar h3 {
+  height: 1.8em;
+  margin: 0;
+  padding: 0 0.5em;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+.browser-sidebar h3:first-child {
+  padding-top: 0.3em;
+}
+.browser-sidebar a, .browser-content a {
+  cursor: default;
+}
+.browser-sidebar a {
+  display: block;
+  height: 1.8em;
+  padding-left: 1em;
+  text-decoration: none;
+}
+.browser-sidebar a:active, .browser-sidebar a.active {
+  background-color: #30383b;
+  color: #617078;
+}
+.browser-content {
+  left: 0;
+  right: 15em;
+  padding-left: 10em;
+  overflow: hidden;
+}
+.browser-anchor {
+  display: block;
+}
+.browser-directory {
+  background-color: #6f828b;
+}
+.browser-directory .browser-sidebar {
+  position: static;
+  float: left;
+  width: 0;
+  font-size: 1em;
+  background-color: transparent;
+}
+.browser-directory .browser-sidebar a.active {
+  position: relative;
+  margin-left: -10em;
+  z-index: 1;
+}
+.browser-listing {
+  height: 100%;
+  padding: 0.5em 0;
+  line-height: 1.3;
+}
+.browser-directory-toggle {
+  display: none;
+}
+.browser-directory-arrow::before {
+  content: '\23f5';
+  float: left;
+  width: 0.5em;
+  height: 1em;
+  padding-left: 0.5em;
+}
+.browser-directory-toggle:checked + .browser-directory-arrow::before {
+  content: '\23f7';
+  width: 0.6em;
+  padding-left: 0.4em;
+}
+.browser-listing a {
+  display: block;
+  height: 1.3em;
+  margin-left: 1.5em;
+}
+.browser-listing a.browser-listing-directory:before {
+  content: '\01f4c1';
+  display: inline-block;
+  width: 1.5em;
+}
+.browser-listing a.browser-listing-directory::before {
+  content: '\01f4c1';
+  display: inline-block;
+  width: 1.5em;
+}
+.browser-directory-folder {
+  display: none;
+  margin-left: 1.3em;
+}
+.browser-directory-toggle:checked + .browser-directory-arrow + a +
+.browser-directory-folder {
+  display: block;
+}
+.browser-pane {
+  right: 0;
+  width: 15em;
+  background-color: #617078;
+}
+#modal.demo .demo-content {
+  z-index: 1;
+}
 .modal-button {
   width: 8em;
+  margin: 2em;
 }
 .modal-toggle {
   display: none;
@@ -170,6 +277,17 @@ h3 {
   background-color: #000;
   opacity: 0.7;
 }
+.modal-dialog h3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.6em;
+  background-color: #617078;
+  font-size: 1.6em;
+  line-height: 1;
+}
 .modal-content {
   position: relative;
   width: 40em;
@@ -191,22 +309,22 @@ h3 {
   float: right;
   margin: 1em 0.5em;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 743px) {
+  body {
+    font-size: 7px;
+  }
+}
+@media screen and (max-width: 987px) {
   body {
     font-size: 9px;
   }
 }
-@media screen and (min-width: 1024px) {
-  body {
-    font-size: 12px;
-  }
-}
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1392px) {
   body {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1860px) {
   body {
     font-size: 21px;
   }
