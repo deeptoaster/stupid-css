@@ -69,6 +69,7 @@
           </div>
           <div class="browser-content">
             <div>
+              <div class="browser-directory"></div>
               <div class="browser-directory">
                 <a class="browser-anchor" name="/"></a>
                 <div class="browser-sidebar">
@@ -76,28 +77,49 @@
                   <a class="active" href="#/">File System</a>
                 </div>
                 <div class="browser-listing">
-                  <a class="browser-listing-directory">boot</a>
-                  <a class="browser-listing-directory">dev</a>
-                  <a class="browser-listing-directory">etc</a>
+                  <a class="browser-listing-directory" href="#/boot">boot</a>
+                  <a class="browser-listing-directory" href="#/dev">dev</a>
+                  <a class="browser-listing-directory" href="#/etc">etc</a>
+                  <a class="browser-listing-directory" href="#/home">home</a>
                   <input id="home" class="browser-directory-toggle" type="checkbox" />
                   <label class="browser-directory-arrow" for="home"></label>
-                  <a class="browser-listing-directory">home</a>
                   <div class="browser-directory-folder">
+                    <a class="browser-listing-directory" href="#/home/azurediamond">azurediamond</a>
                     <input id="home-azurediamond" class="browser-directory-toggle" type="checkbox" />
                     <label class="browser-directory-arrow" for="home-azurediamond"></label>
-                    <a class="browser-listing-directory">azurediamond</a>
                     <div class="browser-directory-folder">
-                      <a class="browser-listing-directory">Desktop</a>
-                      <a class="browser-listing-directory">Documents</a>
-                      <a class="browser-listing-directory">Downloads</a>
+                      <a class="browser-listing-directory" href="#/home/azurediamond/Desktop">Desktop</a>
+                      <a class="browser-listing-directory" href="#/home/azurediamond/Documents">Documents</a>
+                      <a class="browser-listing-directory" href="#/home/azurediamond/Downloads">Downloads</a>
                     </div>
                   </div>
-                  <a class="browser-listing-directory">mnt</a>
-                  <a class="browser-listing-directory">opt</a>
-                  <a class="browser-listing-directory">proc</a>
-                  <a class="browser-listing-directory">tmp</a>
-                  <a class="browser-listing-directory">usr</a>
-                  <a class="browser-listing-directory">var</a>
+                  <a class="browser-listing-directory" href="#/mnt">mnt</a>
+                  <a class="browser-listing-directory" href="#/opt">opt</a>
+                  <a class="browser-listing-directory" href="#/proc">proc</a>
+                  <a class="browser-listing-directory" href="#/tmp">tmp</a>
+                  <a class="browser-listing-directory" href="#/usr">usr</a>
+                  <a class="browser-listing-directory" href="#/var">var</a>
+                </div>
+              </div>
+              <div class="browser-directory">
+                <a class="browser-anchor" name="/boot"></a>
+                <a class="browser-anchor" name="/dev"></a>
+                <a class="browser-anchor" name="/etc"></a>
+                <a class="browser-anchor" name="/mnt"></a>
+                <a class="browser-anchor" name="/opt"></a>
+                <a class="browser-anchor" name="/proc"></a>
+                <a class="browser-anchor" name="/tmp"></a>
+                <a class="browser-anchor" name="/usr"></a>
+                <a class="browser-anchor" name="/var"></a>
+                <div class="browser-listing">
+                  <a class="browser-listing-directory" href="#/">..</a>
+                </div>
+              </div>
+              <div class="browser-directory">
+                <a class="browser-anchor" name="/home"></a>
+                <div class="browser-listing">
+                  <a class="browser-listing-directory" href="#/">..</a>
+                  <a class="browser-listing-directory" href="#/home/azurediamond">azurediamond</a>
                 </div>
               </div>
               <div class="browser-directory">
@@ -109,14 +131,94 @@
                   <a class="active" href="#/home/azurediamond">azurediamond</a>
                 </div>
                 <div class="browser-listing">
-                  <a class="browser-listing-directory">Desktop</a>
-                  <a class="browser-listing-directory">Documents</a>
-                  <a class="browser-listing-directory">Downloads</a>
+                  <a class="browser-listing-directory" href="#/home">..</a>
+                  <a class="browser-listing-directory" href="#/home/azurediamond/Desktop">Desktop</a>
+                  <a class="browser-listing-directory" href="#/home/azurediamond/Documents">Documents</a>
+                  <a class="browser-listing-directory" href="#/home/azurediamond/Downloads">Downloads</a>
+                </div>
+              </div>
+              <div class="browser-directory">
+                <a class="browser-anchor" name="/home/azurediamond/Desktop"></a>
+                <div class="browser-sidebar">
+                  <h3></h3>
+                  <a></a>
+                  <h3></h3>
+                  <a></a>
+                  <a class="active" href="#/home/azurediamond/Desktop">Desktop</a>
+                </div>
+                <div class="browser-listing">
+                  <a class="browser-listing-directory" href="#/home/azurediamond">..</a>
+                  <a class="browser-listing-directory" href="#/home/azurediamond/Desktop/work stuff">work stuff</a>
+                </div>
+              </div>
+              <div class="browser-directory">
+                <a class="browser-anchor" name="/home/azurediamond/Desktop/work stuff"></a>
+                <div class="browser-listing">
+                  <a class="browser-listing-directory" href="#/home/azurediamond/Desktop">..</a>
+                </div>
+              </div>
+              <div class="browser-directory">
+                <a class="browser-anchor" name="/home/azurediamond/Documents"></a>
+                <div class="browser-sidebar">
+                  <h3></h3>
+                  <a></a>
+                  <h3></h3>
+                  <a></a>
+                  <a></a>
+                  <a></a>
+                  <a class="active" href="#/home/azurediamond/Documents">Documents</a>
+                </div>
+                <div class="browser-listing">
+                  <a class="browser-listing-directory" href="#/home/azurediamond">..</a>
+                </div>
+              </div>
+              <div class="browser-directory">
+                <a class="browser-anchor" name="/home/azurediamond/Downloads"></a>
+                <div class="browser-sidebar">
+                  <h3></h3>
+                  <a></a>
+                  <h3></h3>
+                  <a></a>
+                  <a></a>
+                  <a></a>
+                  <a></a>
+                  <a class="active" href="#/home/azurediamond/Downloads">Downloads</a>
+                </div>
+                <div class="browser-listing">
+                  <a class="browser-listing-directory" href="#/home/azurediamond">..</a>
+                </div>
+              </div>
+              <div class="browser-directory">
+                <a class="browser-anchor" name="network:///"></a>
+                <div class="browser-sidebar">
+                  <h3></h3>
+                  <a></a>
+                  <h3></h3>
+                  <a></a>
+                  <a></a>
+                  <a></a>
+                  <a></a>
+                  <a></a>
+                  <h3></h3>
+                  <a class="active" href="#network:///">Browse Network</a>
+                </div>
+              </div>
+              <div class="browser-directory">
+                <a class="browser-anchor" name="trash:///"></a>
+                <div class="browser-sidebar">
+                  <h3></h3>
+                  <a></a>
+                  <h3></h3>
+                  <a></a>
+                  <a></a>
+                  <a class="active" href="#trash:///">Trash</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="browser-pane"></div>
+          <div class="browser-pane">
+            <div class="browser-preview"></div>
+          </div>
         </div>
       </div>
       <div class="demo demo-float demo-1x2">
