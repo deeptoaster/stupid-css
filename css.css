@@ -239,15 +239,38 @@ h2 {
   margin-left: -3em;
   padding-left: 4.5em;
 }
-.browser-listing a.browser-listing-directory:before {
+.browser-item:before {
+  display: inline-block;
+  width: 1.5em;
+}
+.browser-item::before {
   content: '\01f4c1';
   display: inline-block;
   width: 1.5em;
 }
-.browser-listing a.browser-listing-directory::before {
+.browser-item.browser-item-directory:before {
   content: '\01f4c1';
-  display: inline-block;
-  width: 1.5em;
+}
+.browser-item.browser-item-directory::before {
+  content: '\01f4c1';
+}
+.browser-item.browser-item-document:before {
+  content: '\01f4c4';
+}
+.browser-item.browser-item-document::before {
+  content: '\01f4c4';
+}
+.browser-item.browser-item-picture:before {
+  content: '\01f304';
+}
+.browser-item.browser-item-picture::before {
+  content: '\01f304';
+}
+.browser-item.browser-item-video:before {
+  content: '\01f3ac';
+}
+.browser-item.browser-item-video::before {
+  content: '\01f3ac';
 }
 .browser-directory-folder {
   display: none;
@@ -260,9 +283,39 @@ h2 {
 .browser-pane {
   right: 0;
   width: 15em;
+  overflow: hidden;
 }
 .browser-preview {
+  display: block;
   background-color: #617078;
+  line-height: 1.2;
+}
+.browser-preview > i {
+  display: block;
+  padding-top: 0.2em;
+  font-style: normal;
+  font-size: 8em;
+}
+.browser-preview > h3 {
+  margin: 0;
+  font-weight: normal;
+  font-style: 1.2em;
+}
+.browser-preview > table {
+  font-size: 0.8em;
+  width: 100%;
+  margin-top: 0.5em;
+  border-spacing: 0.5em;
+}
+.browser-preview > table th {
+  font-weight: normal;
+  color: #3d484c;
+}
+.browser-preview > table tr > :first-child {
+  text-align: right;
+}
+.browser-preview > table tr > * + * {
+  text-align: left;
 }
 #modal.demo .demo-content {
   z-index: 1;
