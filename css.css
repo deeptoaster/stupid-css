@@ -338,6 +338,7 @@ h2 {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 2;
   padding: 0.5em 3em;
   background-color: rgba(0, 0, 0, 0.7);
   font-size: 0.9em;
@@ -347,7 +348,8 @@ h2 {
 }
 .mole-title-chunks {
   position: relative;
-  top: -100%;
+  top: -8em;
+  z-index: 1;
   margin: 0;
   padding: 0.3em 0;
   color: #546269;
@@ -387,7 +389,7 @@ h2 {
 }
 .mole-start-button {
   position: relative;
-  bottom: -150%;
+  bottom: -8em;
   transition: bottom 400ms cubic-bezier(0.36, 0, 0.66, -0.56);
 }
 .mole-title-toggle:checked + .mole-title .mole-start-button {
@@ -405,7 +407,7 @@ h2 {
   transition: opacity 400ms 400ms;
 }
 .mole-title-toggle:checked + .mole-title + .mole-game {
-  top: -100%;
+  top: -8em;
   opacity: 0;
   transition: none;
 }
@@ -424,6 +426,7 @@ h2 {
 }
 .mole-hole + .mole-hole {
   display: none;
+  z-index: 1;
   border-color: #444f55;
   background-color: #30383b;
   cursor: not-allowed;
@@ -458,14 +461,15 @@ h2 {
   background-color: #444f55;
   transform-origin: 2.5em 5.5em;
 }
-.mole-hole:active::before, .mole-hole:active::after {
+.mole-hole:active::before, .mole-hole:active::after,
+.mole-mole:active::before, .mole-mole:active::after {
   animation-name: hammer;
   animation-duration: 200ms;
 }
-.mole-hole:active::before {
+.mole-hole:active::before, .mole-mole:active::before {
   top: -0.5em;
 }
-.mole-hole:active::after {
+.mole-hole:active::after, .mole-mole:active::after {
   top: -2em;
 }
 .mole-hole + .mole-hole::before, .mole-hole + .mole-hole::after {
@@ -510,14 +514,26 @@ h2 {
   left: 29em;
 }
 .mole-mole {
-/*
-  display: none;
-*/
   position: absolute;
-  top: 2.5em;
-  left: 5em;
+  top: -8em;
+  left: 0;
   width: 5em;
   height: 3em;
+  animation-name: mole;
+  animation-duration: 300s;
+  animation-timing-function: step-end;
+}
+.mole-mole.mole-mole-1 {
+  animation-delay: -60s;
+}
+.mole-mole.mole-mole-2 {
+  animation-delay: -120s;
+}
+.mole-mole.mole-mole-3 {
+  animation-delay: -180s;
+}
+.mole-mole.mole-mole-4 {
+  animation-delay: -240s;
 }
 .mole-mole-toggle:checked + .mole-mole {
   display: none;
@@ -774,6 +790,649 @@ h2 {
   }
   100% {
     transform: rotate(-30deg);
+  }
+}
+@keyframes mole {
+  1.11% {
+    top: 1em;
+    left: 23em;
+  }
+  1.34% {
+    top: -8em;
+  }
+  2.36% {
+    top: 2.5em;
+    left: 17em;
+  }
+  2.60% {
+    top: -8em;
+  }
+  3.75% {
+    top: 2.5em;
+    left: 17em;
+  }
+  3.90% {
+    top: -8em;
+  }
+  4.84% {
+    top: 2.5em;
+    left: 29em;
+  }
+  5.00% {
+    top: -8em;
+  }
+  5.72% {
+    top: 2.5em;
+    left: 5em;
+  }
+  5.91% {
+    top: -8em;
+  }
+  6.62% {
+    top: 2.5em;
+    left: 5em;
+  }
+  6.84% {
+    top: -8em;
+  }
+  7.76% {
+    top: 1em;
+    left: 23em;
+  }
+  7.96% {
+    top: -8em;
+  }
+  9.00% {
+    top: 2.5em;
+    left: 17em;
+  }
+  9.12% {
+    top: -8em;
+  }
+  10.07% {
+    top: 2.5em;
+    left: 29em;
+  }
+  10.21% {
+    top: -8em;
+  }
+  11.07% {
+    top: 2.5em;
+    left: 29em;
+  }
+  11.24% {
+    top: -8em;
+  }
+  12.44% {
+    top: 1em;
+    left: 23em;
+  }
+  12.64% {
+    top: -8em;
+  }
+  13.78% {
+    top: 2.5em;
+    left: 17em;
+  }
+  13.98% {
+    top: -8em;
+  }
+  14.76% {
+    top: 2.5em;
+    left: 17em;
+  }
+  14.90% {
+    top: -8em;
+  }
+  15.73% {
+    top: 2.5em;
+    left: 29em;
+  }
+  15.96% {
+    top: -8em;
+  }
+  16.56% {
+    top: 2.5em;
+    left: 5em;
+  }
+  16.78% {
+    top: -8em;
+  }
+  17.39% {
+    top: 1em;
+    left: 11em;
+  }
+  17.52% {
+    top: -8em;
+  }
+  18.29% {
+    top: 1em;
+    left: 11em;
+  }
+  18.51% {
+    top: -8em;
+  }
+  19.50% {
+    top: 2.5em;
+    left: 5em;
+  }
+  19.70% {
+    top: -8em;
+  }
+  21.05% {
+    top: 1em;
+    left: 11em;
+  }
+  21.24% {
+    top: -8em;
+  }
+  22.15% {
+    top: 2.5em;
+    left: 5em;
+  }
+  22.38% {
+    top: -8em;
+  }
+  23.27% {
+    top: 1em;
+    left: 23em;
+  }
+  23.47% {
+    top: -8em;
+  }
+  24.45% {
+    top: 1em;
+    left: 23em;
+  }
+  24.58% {
+    top: -8em;
+  }
+  25.78% {
+    top: 1em;
+    left: 23em;
+  }
+  25.94% {
+    top: -8em;
+  }
+  26.65% {
+    top: 2.5em;
+    left: 29em;
+  }
+  26.85% {
+    top: -8em;
+  }
+  27.76% {
+    top: 2.5em;
+    left: 17em;
+  }
+  27.89% {
+    top: -8em;
+  }
+  28.85% {
+    top: 2.5em;
+    left: 5em;
+  }
+  29.06% {
+    top: -8em;
+  }
+  30.02% {
+    top: 1em;
+    left: 23em;
+  }
+  30.23% {
+    top: -8em;
+  }
+  30.89% {
+    top: 2.5em;
+    left: 17em;
+  }
+  31.05% {
+    top: -8em;
+  }
+  31.76% {
+    top: 2.5em;
+    left: 5em;
+  }
+  31.98% {
+    top: -8em;
+  }
+  32.67% {
+    top: 2.5em;
+    left: 17em;
+  }
+  32.84% {
+    top: -8em;
+  }
+  33.83% {
+    top: 2.5em;
+    left: 29em;
+  }
+  34.07% {
+    top: -8em;
+  }
+  35.16% {
+    top: 2.5em;
+    left: 5em;
+  }
+  35.33% {
+    top: -8em;
+  }
+  35.96% {
+    top: 2.5em;
+    left: 5em;
+  }
+  36.14% {
+    top: -8em;
+  }
+  36.93% {
+    top: 1em;
+    left: 11em;
+  }
+  37.05% {
+    top: -8em;
+  }
+  38.24% {
+    top: 2.5em;
+    left: 5em;
+  }
+  38.39% {
+    top: -8em;
+  }
+  39.07% {
+    top: 2.5em;
+    left: 5em;
+  }
+  39.22% {
+    top: -8em;
+  }
+  40.85% {
+    top: 2.5em;
+    left: 17em;
+  }
+  41.09% {
+    top: -8em;
+  }
+  42.17% {
+    top: 2.5em;
+    left: 17em;
+  }
+  42.34% {
+    top: -8em;
+  }
+  43.13% {
+    top: 2.5em;
+    left: 5em;
+  }
+  43.34% {
+    top: -8em;
+  }
+  44.41% {
+    top: 1em;
+    left: 11em;
+  }
+  44.63% {
+    top: -8em;
+  }
+  45.52% {
+    top: 2.5em;
+    left: 29em;
+  }
+  45.71% {
+    top: -8em;
+  }
+  46.48% {
+    top: 1em;
+    left: 11em;
+  }
+  46.71% {
+    top: -8em;
+  }
+  47.81% {
+    top: 2.5em;
+    left: 29em;
+  }
+  47.94% {
+    top: -8em;
+  }
+  48.69% {
+    top: 1em;
+    left: 23em;
+  }
+  48.91% {
+    top: -8em;
+  }
+  49.85% {
+    top: 2.5em;
+    left: 17em;
+  }
+  50.07% {
+    top: -8em;
+  }
+  51.15% {
+    top: 2.5em;
+    left: 5em;
+  }
+  51.28% {
+    top: -8em;
+  }
+  52.43% {
+    top: 2.5em;
+    left: 17em;
+  }
+  52.56% {
+    top: -8em;
+  }
+  53.57% {
+    top: 2.5em;
+    left: 5em;
+  }
+  53.75% {
+    top: -8em;
+  }
+  54.56% {
+    top: 2.5em;
+    left: 5em;
+  }
+  54.68% {
+    top: -8em;
+  }
+  55.40% {
+    top: 1em;
+    left: 23em;
+  }
+  55.53% {
+    top: -8em;
+  }
+  56.55% {
+    top: 1em;
+    left: 23em;
+  }
+  56.69% {
+    top: -8em;
+  }
+  57.37% {
+    top: 2.5em;
+    left: 29em;
+  }
+  57.56% {
+    top: -8em;
+  }
+  58.75% {
+    top: 1em;
+    left: 11em;
+  }
+  58.90% {
+    top: -8em;
+  }
+  59.51% {
+    top: 1em;
+    left: 23em;
+  }
+  59.71% {
+    top: -8em;
+  }
+  60.76% {
+    top: 2.5em;
+    left: 5em;
+  }
+  60.89% {
+    top: -8em;
+  }
+  61.55% {
+    top: 2.5em;
+    left: 29em;
+  }
+  61.78% {
+    top: -8em;
+  }
+  62.56% {
+    top: 1em;
+    left: 23em;
+  }
+  62.69% {
+    top: -8em;
+  }
+  63.84% {
+    top: 2.5em;
+    left: 5em;
+  }
+  63.98% {
+    top: -8em;
+  }
+  64.73% {
+    top: 1em;
+    left: 23em;
+  }
+  64.91% {
+    top: -8em;
+  }
+  66.07% {
+    top: 2.5em;
+    left: 17em;
+  }
+  66.24% {
+    top: -8em;
+  }
+  66.90% {
+    top: 1em;
+    left: 11em;
+  }
+  67.12% {
+    top: -8em;
+  }
+  67.97% {
+    top: 2.5em;
+    left: 5em;
+  }
+  68.18% {
+    top: -8em;
+  }
+  68.88% {
+    top: 1em;
+    left: 11em;
+  }
+  69.00% {
+    top: -8em;
+  }
+  69.98% {
+    top: 1em;
+    left: 11em;
+  }
+  70.13% {
+    top: -8em;
+  }
+  70.74% {
+    top: 2.5em;
+    left: 17em;
+  }
+  70.87% {
+    top: -8em;
+  }
+  71.51% {
+    top: 2.5em;
+    left: 29em;
+  }
+  71.65% {
+    top: -8em;
+  }
+  72.66% {
+    top: 2.5em;
+    left: 29em;
+  }
+  72.89% {
+    top: -8em;
+  }
+  73.58% {
+    top: 1em;
+    left: 11em;
+  }
+  73.73% {
+    top: -8em;
+  }
+  74.90% {
+    top: 1em;
+    left: 11em;
+  }
+  75.10% {
+    top: -8em;
+  }
+  75.71% {
+    top: 1em;
+    left: 23em;
+  }
+  75.90% {
+    top: -8em;
+  }
+  76.86% {
+    top: 1em;
+    left: 23em;
+  }
+  77.02% {
+    top: -8em;
+  }
+  78.07% {
+    top: 1em;
+    left: 23em;
+  }
+  78.27% {
+    top: -8em;
+  }
+  79.14% {
+    top: 2.5em;
+    left: 17em;
+  }
+  79.33% {
+    top: -8em;
+  }
+  79.95% {
+    top: 1em;
+    left: 11em;
+  }
+  80.91% {
+    top: 2.5em;
+    left: 29em;
+  }
+  81.10% {
+    top: -8em;
+  }
+  82.29% {
+    top: 1em;
+    left: 11em;
+  }
+  82.45% {
+    top: -8em;
+  }
+  83.57% {
+    top: 2.5em;
+    left: 29em;
+  }
+  83.75% {
+    top: -8em;
+  }
+  84.55% {
+    top: 2.5em;
+    left: 17em;
+  }
+  84.77% {
+    top: -8em;
+  }
+  85.79% {
+    top: 1em;
+    left: 11em;
+  }
+  85.95% {
+    top: -8em;
+  }
+  86.92% {
+    top: 2.5em;
+    left: 29em;
+  }
+  87.14% {
+    top: -8em;
+  }
+  87.90% {
+    top: 2.5em;
+    left: 17em;
+  }
+  88.12% {
+    top: -8em;
+  }
+  88.95% {
+    top: 2.5em;
+    left: 29em;
+  }
+  89.14% {
+    top: -8em;
+  }
+  89.97% {
+    top: 2.5em;
+    left: 5em;
+  }
+  90.10% {
+    top: -8em;
+  }
+  91.26% {
+    top: 1em;
+    left: 11em;
+  }
+  91.41% {
+    top: -8em;
+  }
+  92.29% {
+    top: 1em;
+    left: 11em;
+  }
+  92.45% {
+    top: -8em;
+  }
+  93.06% {
+    top: 2.5em;
+    left: 5em;
+  }
+  93.24% {
+    top: -8em;
+  }
+  93.88% {
+    top: 2.5em;
+    left: 5em;
+  }
+  94.02% {
+    top: -8em;
+  }
+  95.07% {
+    top: 2.5em;
+    left: 29em;
+  }
+  95.29% {
+    top: -8em;
+  }
+  96.29% {
+    top: 1em;
+    left: 23em;
+  }
+  96.42% {
+    top: -8em;
+  }
+  97.51% {
+    top: 2.5em;
+    left: 17em;
+  }
+  97.74% {
+    top: -8em;
+  }
+  98.40% {
+    top: 2.5em;
+    left: 29em;
+  }
+  98.61% {
+    top: -8em;
+  }
+  99.28% {
+    top: 2.5em;
+    left: 29em;
+  }
+  99.51% {
+    top: -8em;
   }
 }
 @keyframes scroll {
