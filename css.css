@@ -3,6 +3,8 @@ body {
   background-color: #161819;
   color: #617078;
   text-align: center;
+}
+body, input {
   font: 12px/1.5 'Titillium Web', sans-serif;
 }
 h1 {
@@ -132,6 +134,181 @@ h2 {
   position: relative;
   width: 100%;
   height: 80000em;
+}
+#book.demo .demo-content {
+  overflow: hidden;
+}
+.book-reset {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background-color: transparent;
+  color: transparent;
+}
+.book-page-toggle {
+  position: absolute;
+  top: -8em;
+}
+.book, .book-page {
+  width: 8em;
+  height: 11em;
+}
+.book {
+  position: absolute;
+  top: 7em;
+  font-size: 0.64em;
+  transition: all 800ms, opacity 800ms 400ms;
+}
+.book.book-lipsum {
+  left: 1.84375em;
+}
+.book.book-humpty {
+  left: 10.84375em;
+}
+.book.book-died {
+  left: 19.84375em;
+}
+.book-page {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  box-shadow: 0 0 0.5em #161819;
+  right: 0;
+  border: 0;
+  padding: 3em 1em;
+  background-color: #617078;
+  color: #22282a;
+  font-size: 1em;
+  white-space: pre-wrap;
+  transform-origin: left;
+}
+.book-small .book-page {
+  width: 12.5em;
+  height: 17.1875em;
+  box-shadow: 0 0 0.78125em #161819;
+  padding: 4.6875em 1.5625em;
+  font-size: 0.64em;
+}
+.book-page.book-page-0 {
+  display: block;
+  width: 6.4em;
+  height: 8.8em;
+  background-color: #546269;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.book-small .book-page.book-page-0 {
+  display: block;
+  width: 10em;
+  height: 13.75em;
+  background-color: #546269;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.book-lipsum-toggle:checked ~ .book-lipsum,
+.book-humpty-toggle:checked ~ .book-humpty,
+.book-died-toggle:checked ~ .book-died {
+  top: 2em;
+  left: 1.5em;
+  z-index: 1;
+  width: 16em;
+  font-size: 1em;
+}
+.book-lipsum-toggle:checked ~ .book-humpty,
+.book-lipsum-toggle:checked ~ .book-died,
+.book-humpty-toggle:checked ~ .book-lipsum,
+.book-humpty-toggle:checked ~ .book-died,
+.book-died-toggle:checked ~ .book-lipsum,
+.book-died-toggle:checked ~ .book-humpty {
+  opacity: 0;
+  transition: all 800ms;
+}
+.book-page-1-toggle:checked ~ .book .book-page-0,
+.book-page-2-toggle:checked ~ .book .book-page-0,
+.book-page-3-toggle:checked ~ .book .book-page-0,
+.book-page-4-toggle:checked ~ .book .book-page-0,
+.book-page-5-toggle:checked ~ .book .book-page-0,
+.book-page-6-toggle:checked ~ .book .book-page-0,
+.book-page-2-toggle:checked ~ .book .book-page-1,
+.book-page-3-toggle:checked ~ .book .book-page-1,
+.book-page-4-toggle:checked ~ .book .book-page-1,
+.book-page-5-toggle:checked ~ .book .book-page-1,
+.book-page-6-toggle:checked ~ .book .book-page-1,
+.book-page-3-toggle:checked ~ .book .book-page-2,
+.book-page-4-toggle:checked ~ .book .book-page-2,
+.book-page-5-toggle:checked ~ .book .book-page-2,
+.book-page-6-toggle:checked ~ .book .book-page-2,
+.book-page-4-toggle:checked ~ .book .book-page-3,
+.book-page-5-toggle:checked ~ .book .book-page-3,
+.book-page-6-toggle:checked ~ .book .book-page-3,
+.book-page-5-toggle:checked ~ .book .book-page-4,
+.book-page-6-toggle:checked ~ .book .book-page-4,
+.book-page-6-toggle:checked ~ .book .book-page-5 {
+  z-index: 1;
+  box-shadow: 0 0 0.1em #161819;
+  color: transparent;
+  transform: perspective(20em) rotateY(-180deg);
+  transition: color linear 0ms 400ms, transform ease-in-out 800ms;
+}
+.book-lipsum-toggle:checked ~ .book-humpty .book-page,
+.book-lipsum-toggle:checked ~ .book-died .book-page,
+.book-humpty-toggle:checked ~ .book-lipsum .book-page,
+.book-humpty-toggle:checked ~ .book-died .book-page,
+.book-died-toggle:checked ~ .book-lipsum .book-page,
+.book-died-toggle:checked ~ .book-humpty .book-page {
+  transform: none;
+}
+.book-page-1-toggle:checked ~ .book.book-small .book-page-0,
+.book-page-2-toggle:checked ~ .book.book-small .book-page-0,
+.book-page-3-toggle:checked ~ .book.book-small .book-page-0,
+.book-page-4-toggle:checked ~ .book.book-small .book-page-0,
+.book-page-5-toggle:checked ~ .book.book-small .book-page-0,
+.book-page-6-toggle:checked ~ .book.book-small .book-page-0,
+.book-page-2-toggle:checked ~ .book.book-small .book-page-1,
+.book-page-3-toggle:checked ~ .book.book-small .book-page-1,
+.book-page-4-toggle:checked ~ .book.book-small .book-page-1,
+.book-page-5-toggle:checked ~ .book.book-small .book-page-1,
+.book-page-6-toggle:checked ~ .book.book-small .book-page-1,
+.book-page-3-toggle:checked ~ .book.book-small .book-page-2,
+.book-page-4-toggle:checked ~ .book.book-small .book-page-2,
+.book-page-5-toggle:checked ~ .book.book-small .book-page-2,
+.book-page-6-toggle:checked ~ .book.book-small .book-page-2,
+.book-page-4-toggle:checked ~ .book.book-small .book-page-3,
+.book-page-5-toggle:checked ~ .book.book-small .book-page-3,
+.book-page-6-toggle:checked ~ .book.book-small .book-page-3,
+.book-page-5-toggle:checked ~ .book.book-small .book-page-4,
+.book-page-6-toggle:checked ~ .book.book-small .book-page-4,
+.book-page-6-toggle:checked ~ .book.book-small .book-page-5 {
+  box-shadow: 0 0 0.15625em #161819;
+  color: transparent;
+  transform: perspective(31.25em) rotateY(-180deg);
+}
+.book-page-1-toggle:checked ~ .book .book-page-1,
+.book-page-2-toggle:checked ~ .book .book-page-1,
+.book-page-2-toggle:checked ~ .book .book-page-2,
+.book-page-3-toggle:checked ~ .book .book-page-1,
+.book-page-3-toggle:checked ~ .book .book-page-2,
+.book-page-3-toggle:checked ~ .book .book-page-3,
+.book-page-4-toggle:checked ~ .book .book-page-1,
+.book-page-4-toggle:checked ~ .book .book-page-2,
+.book-page-4-toggle:checked ~ .book .book-page-3,
+.book-page-4-toggle:checked ~ .book .book-page-4,
+.book-page-5-toggle:checked ~ .book .book-page-1,
+.book-page-5-toggle:checked ~ .book .book-page-2,
+.book-page-5-toggle:checked ~ .book .book-page-3,
+.book-page-5-toggle:checked ~ .book .book-page-4,
+.book-page-5-toggle:checked ~ .book .book-page-5,
+.book-page-6-toggle:checked ~ .book .book-page-1,
+.book-page-6-toggle:checked ~ .book .book-page-2,
+.book-page-6-toggle:checked ~ .book .book-page-3,
+.book-page-6-toggle:checked ~ .book .book-page-4,
+.book-page-6-toggle:checked ~ .book .book-page-5,
+.book-page-6-toggle:checked ~ .book .book-page-6 {
+  display: block;
 }
 #browser.demo .demo-content {
   overflow: hidden;
@@ -303,7 +480,7 @@ h2 {
 .browser-preview > h3 {
   margin: 0;
   font-weight: normal;
-  font-style: 1.2em;
+  font-size: 1.2em;
 }
 .browser-preview > table {
   font-size: 0.8em;
