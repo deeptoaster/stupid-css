@@ -74,7 +74,7 @@ h2 {
   background-color: #22282a;
 }
 .demo.demo-2x1 .demo-content, .demo.demo-2x2 .demo-content {
-  height: 18em;
+  height: 19em;
 }
 .demo.demo-1x2 .demo-content, .demo.demo-2x2 .demo-content {
   width: 39em;
@@ -317,7 +317,7 @@ input.book-page {
 }
 .browser-sidebar, .browser-content, .browser-directory, .browser-pane,
 .browser-preview {
-  height: 19.375em;
+  height: 20.625em;
 }
 .browser-sidebar, .browser-content, .browser-pane, .browser-sidebar a,
 .browser-content a, .browser-pane a {
@@ -940,32 +940,64 @@ input.book-page {
   float: right;
   margin: 1em 0.5em;
 }
+@media (max-aspect-ratio: 4/3) {
+  body {
+    font-size: 15.5px;
+  }
+  .demos {
+    position: relative;
+    width: 61em;
+  }
+  .double-click-label {
+    margin-right: 16.25em;
+  }
+  #book.demo, #mole.demo {
+    position: absolute;
+  }
+  #book.demo {
+    top: 20em;
+    left: 40.5em;
+  }
+  #mole.demo {
+    top: 30em;
+  }
+}
 @media (max-aspect-ratio: 3/4) {
   body {
     font-size: 19px;
   }
+  h1 {
+    font-size: 2em;
+  }
   .demos {
-    position: relative;
     width: 41em;
     margin-top: 20.5em;
   }
-  .demo.demo-1x2, .demo.demo-2x2 {
-    position: absolute;
-  }
   .double-click-label {
-    top: 27.6em;
+    top: 26.1em;
     margin-right: 6.25em;
   }
+  #book.demo {
+    position: static;
+  }
+  #browser.demo, #mole.demo {
+    position: absolute;
+  }
   #browser.demo {
-    top: -19em;
+    top: -20em;
   }
   #mole.demo {
-    top: 29em;
+    top: 30em;
   }
 }
 @media screen and (max-width: 987px) {
   body {
     font-size: 9px;
+  }
+}
+@media screen and (max-width: 987px) and (max-aspect-ratio: 4/3) {
+  body {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 987px) and (max-aspect-ratio: 3/4) {
@@ -978,9 +1010,19 @@ input.book-page {
     font-size: 7px;
   }
 }
+@media screen and (max-width: 743px) and (max-aspect-ratio: 4/3) {
+  body {
+    font-size: 9.5px;
+  }
+}
 @media screen and (max-width: 743px) and (max-aspect-ratio: 3/4) {
   body {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 555px) and (max-aspect-ratio: 4/3) {
+  body {
+    font-size: 8px;
   }
 }
 @media screen and (max-width: 555px) and (max-aspect-ratio: 3/4) {
@@ -993,6 +1035,11 @@ input.book-page {
     font-size: 16px;
   }
 }
+@media screen and (min-width: 1392px) and (max-aspect-ratio: 4/3) {
+  body {
+    font-size: 20px;
+  }
+}
 @media screen and (min-width: 1392px) and (max-aspect-ratio: 3/4) {
   body {
     font-size: 24px;
@@ -1001,6 +1048,11 @@ input.book-page {
 @media screen and (min-width: 1860px) {
   body {
     font-size: 21px;
+  }
+}
+@media screen and (min-width: 1860px) and (max-aspect-ratio: 4/3) {
+  body {
+    font-size: 25.5px;
   }
 }
 @media screen and (min-width: 1860px) and (max-aspect-ratio: 3/4) {
