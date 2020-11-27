@@ -47,8 +47,8 @@
             <input id="timer-paused" class="timer-toggle timer-paused-toggle" type="radio" name="timer-state" />
             <input id="timer-running" class="timer-toggle timer-running-toggle" type="radio" name="timer-state" />
             <input id="timer-stopped" class="timer-toggle timer-stopped-toggle" type="radio" name="timer-state" checked="checked" />
-            <input id="timer-analog" class="timer-toggle timer-analog-toggle" type="radio" name="timer-mode" checked="checked" />
-            <input id="timer-digital" class="timer-toggle timer-digital-toggle" type="radio" name="timer-mode" />
+            <input id="timer-analog" class="timer-toggle timer-analog-toggle" type="radio" name="timer-mode" />
+            <input id="timer-digital" class="timer-toggle timer-digital-toggle" type="radio" name="timer-mode" checked="checked" />
             <div class="timer-controls">
               <label class="button button-small timer-resume" for="timer-running">Resume</label>
               <label class="button button-small timer-start" for="timer-running">Start</label>
@@ -75,6 +75,73 @@
               <span class="timer-clock-hand timer-clock-hand-second"></span>
               <span class="timer-clock-hand timer-clock-hand-minute"></span>
               <span class="timer-clock-hand timer-clock-hand-hour"></span>
+            </div>
+            <div class="timer-digital-clock">
+              <span class="timer-clock-digit timer-digit-ten-minute">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-3"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-digit-one-minute">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-3"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-colon"></span>
+              <span class="timer-clock-digit timer-digit-ten-second">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-3"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-digit-one-second">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-3"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-point"></span>
+              <span class="timer-clock-digit timer-digit-hundred-millisecond">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-3"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-digit-ten-millisecond">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-3"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-digit-one-millisecond">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-3"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
             </div>
           </div>
         </div>
@@ -115,7 +182,7 @@
           <div class="book book-humpty">
             <label class="book-page book-page-0" for="book-humpty-page-1-toggle">
               <span class="book-decoration"></span>
-              <span>Humpty Dumpty</label>
+              <span>Humpty Dumpty</span>
             </label>
             <label class="book-page book-page-1" for="book-humpty-page-2-toggle">Humpty Dumpty sat on a wall.</label>
             <label class="book-page book-page-2" for="book-humpty-page-3-toggle">Humpty Dumpty had a great fall.</label>
@@ -127,14 +194,13 @@
           <div class="book book-died book-small">
             <label class="book-page book-page-0" for="book-died-page-1-toggle">
               <span class="book-decoration"></span>
-              <span>I died for Beauty&mdash;but was scarce</label>
+              <span>I died for Beauty&mdash;but was scarce</span>
             </label>
             <label class="book-page book-page-1" for="book-died-page-2-toggle">I died for Beauty&mdash;but was scarse<br /><br />Adjusted in the Tomb</label>
             <label class="book-page book-page-2" for="book-died-page-3-toggle">When one who died for Truth, was lain<br /><br />In an adjoining Room&mdash;</label>
             <label class="book-page book-page-3" for="book-died-page-4-toggle">He questioned softly "Why I failed"?<br /><br />"For Beauty", I replied&mdash;</label>
             <label class="book-page book-page-4" for="book-died-page-5-toggle">"And I&mdash;for Truth&mdash;Themself are One&mdash;<br /><br />We Brethren, are", He said&mdash;</label>
             <label class="book-page book-page-5" for="book-died-page-6-toggle">And so, as Kinsmen, met a Night&mdash;<br /><br />We talked between the Rooms&mdash;</label>
-            </label>
             <input class="book-page book-page-6" type="reset" value="Until the Moss had reached our lips&mdash;
 
 And covered up&mdash;Our names&mdash;" />

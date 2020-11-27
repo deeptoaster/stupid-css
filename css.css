@@ -118,8 +118,9 @@ h2 {
 }
 .double-click-container {
   position: relative;
-  width: 8em;
-  height: 2em;
+  width: 8.2em;
+  height: 2.2em;
+  margin: -0.1em;
   overflow: hidden;
 }
 .double-click-scroll {
@@ -205,14 +206,20 @@ h2 {
 .timer-digital-toggle:checked ~ .timer-controls .timer-digital {
   cursor: default;
 }
+.timer-analog-toggle:checked ~ .timer-digital-clock,
+.timer-digital-toggle:checked ~ .timer-analog-clock {
+  top: -12em;
+}
 .timer-analog-clock {
-  position: relative;
+  position: absolute;
+  top: 1em;
+  left: 4em;
   -webkit-box-shadow: inset 0 0 0.2em #30383b, 0 0 0.1em #161819;
   -moz-box-shadow: inset 0 0 0.2em #30383b, 0 0 0.1em #161819;
   box-shadow: inset 0 0 0.2em #30383b, 0 0 0.1em #161819;
   width: 10.6em;
   height: 10.6em;
-  margin: 1em auto;
+  margin: auto;
   border: 0.2em solid #546269;
   -webkit-border-radius: 6em;
   -moz-border-radius: 6em;
@@ -424,6 +431,104 @@ h2 {
   -o-animation-play-state: running;
   -moz-animation-play-state: running;
   animation-play-state: running;
+}
+.timer-digital-clock {
+  position: absolute;
+  top: 4em;
+  left: 1.7em;
+  font-size: 0.9em;
+}
+.timer-clock-digit, .timer-clock-colon, .timer-clock-point {
+  display: inline-block;
+  position: relative;
+}
+.timer-clock-digit {
+  width: 2.2em;
+}
+.timer-clock-segment {
+  display: block;
+  position: absolute;
+  width: 1.1em;
+  border-top: 0.3em solid #6f828b;
+}
+.timer-clock-segment.timer-clock-segment-1,
+.timer-clock-segment.timer-clock-segment-2,
+.timer-clock-segment.timer-clock-segment-4,
+.timer-clock-segment.timer-clock-segment-5 {
+  -webkit-transform: rotate(98deg);
+  -o-transform: rotate(98deg);
+  -ms-transform: rotate(98deg);
+  -moz-transform: rotate(98deg);
+  transform: rotate(98deg);
+}
+.timer-clock-segment.timer-clock-segment-0 {
+  top: 0;
+  left: 0.4em;
+}
+.timer-clock-segment.timer-clock-segment-1 {
+  top: 0.8em;
+  left: -0.5em;
+}
+.timer-clock-segment.timer-clock-segment-2 {
+  top: 0.8em;
+  left: 1.1em;
+}
+.timer-clock-segment.timer-clock-segment-3 {
+  top: 1.6em;
+  left: 0.2em;
+}
+.timer-clock-segment.timer-clock-segment-4 {
+  top: 2.4em;
+  left: -0.7em;
+}
+.timer-clock-segment.timer-clock-segment-5 {
+  top: 2.4em;
+  left: 0.9em;
+}
+.timer-clock-segment.timer-clock-segment-6 {
+  top: 3.1em;
+  left: 0;
+}
+.timer-clock-segment::before, .timer-clock-segment::after,
+.timer-clock-colon::before, .timer-clock-colon::after,
+.timer-clock-point::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-style: solid;
+}
+.timer-clock-segment::before {
+  top: -0.3em;
+  left: -0.2em;
+  border-width: 0.2em 0.2em 0.1em 0;
+  border-color: transparent #6f828b transparent transparent;
+}
+.timer-clock-segment::after {
+  right: -0.2em;
+  bottom: 0;
+  border-width: 0.1em 0 0.2em 0.2em;
+  border-color: transparent transparent transparent #6f828b;
+}
+.timer-clock-colon, .timer-clock-point {
+  width: 0.5em;
+}
+.timer-clock-colon::before, .timer-clock-colon::after,
+.timer-clock-point::after {
+  -webkit-border-radius: 0.1em;
+  -moz-border-radius: 0.1em;
+  border-radius: 0.1em;
+}
+.timer-clock-colon::before {
+  top: 1.4em;
+  left: -0.3em;
+  border-widtH: 0.5em 0.35em 0 0.25em;
+  border-color: #6f828b transparent transparent transparent;
+}
+.timer-clock-colon::after, .timer-clock-point::after {
+  top: 2.9em;
+  left: -0.6em;
+  border-widtH: 0 0.25em 0.5em 0.35em;
+  border-color: transparent transparent #6f828b transparent;
 }
 #book.demo .demo-content {
   overflow: hidden;
