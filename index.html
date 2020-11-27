@@ -41,9 +41,38 @@
             </span>
           </div>
         </div>
-        <div class="demo demo-2x1">
+        <div id="timer" class="demo demo-2x1">
           <div class="demo-content">
             <h2>Timer</h2>
+            <input id="timer-paused" class="timer-toggle timer-paused-toggle" type="radio" name="timer-state" />
+            <input id="timer-running" class="timer-toggle timer-running-toggle" type="radio" name="timer-state" />
+            <input id="timer-stopped" class="timer-toggle timer-stopped-toggle" type="radio" name="timer-state" checked="checked" />
+            <input id="timer-analog" class="timer-toggle timer-analog-toggle" type="radio" name="timer-mode" checked="checked" />
+            <input id="timer-digital" class="timer-toggle timer-digital-toggle" type="radio" name="timer-mode" />
+            <div class="timer-controls">
+              <label class="button button-small timer-resume" for="timer-running">Resume</label>
+              <label class="button button-small timer-start" for="timer-running">Start</label>
+              <label class="button button-small timer-stop" for="timer-paused">Stop</label>
+              <label class="button button-small" for="timer-stopped">Reset</label>
+              <span class="input-group">
+                <label class="button button-small timer-analog" for="timer-analog">Analog</label>
+                <label class="button button-small timer-digital" for="timer-digital">Digital</label>
+              </span>
+            </div>
+            <div class="timer-analog-clock">
+              <span class="timer-clock-marker timer-clock-marker-0">
+                <span class="timer-clock-marker-tick">0</span>
+              </span>
+              <span class="timer-clock-marker timer-clock-marker-15">
+                <span class="timer-clock-marker-tick">15</span>
+              </span>
+              <span class="timer-clock-marker timer-clock-marker-30">
+                <span class="timer-clock-marker-tick">30</span>
+              </span>
+              <span class="timer-clock-marker timer-clock-marker-45">
+                <span class="timer-clock-marker-tick">45</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>

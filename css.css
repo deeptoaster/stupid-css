@@ -52,8 +52,36 @@ h2 {
 .button:hover {
   background-color: #6f828b;
 }
-.button:active {
+.button:active,
+.timer-analog-toggle:checked ~ .timer-controls .timer-analog,
+.timer-digital-toggle:checked ~ .timer-controls .timer-digital {
   background-color: #546269;
+}
+.input-group {
+  display: inline-block;
+}
+.input-group .button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.input-group .button + .button {
+  margin-left: -0.2em;
+}
+.input-group .button:first-child {
+  -webkit-border-radius: 0.3em 0 0 0.3em;
+  -moz-border-radius: 0.3em 0 0 0.3em;
+  border-radius: 0.3em 0 0 0.3em;
+}
+.input-group .button:last-child {
+  -webkit-border-radius: 0 0.3em 0.3em 0;
+  -moz-border-radius: 0 0.3em 0.3em 0;
+  border-radius: 0 0.3em 0.3em 0;
+}
+.input-group .button:first-child:last-child {
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  border-radius: 0.3em;
 }
 .demos {
   width: 81em;
@@ -149,6 +177,141 @@ h2 {
   position: relative;
   width: 100%;
   height: 80000em;
+}
+#timer.demo .demo-content {
+  overflow: hidden;
+}
+.timer-toggle {
+  position: absolute;
+  top: -8em;
+}
+.timer-controls {
+  position: absolute;
+  bottom: 4em;
+  width: 100%;
+}
+.timer-controls .button {
+  width: 3.5em;
+}
+.timer-resume, .timer-start, .timer-stop {
+  display: none;
+}
+.timer-paused-toggle:checked ~ .timer-controls .timer-resume,
+.timer-running-toggle:checked ~ .timer-controls .timer-stop,
+.timer-stopped-toggle:checked ~ .timer-controls .timer-start {
+  display: inline-block;
+}
+.timer-analog-toggle:checked ~ .timer-controls .timer-analog,
+.timer-digital-toggle:checked ~ .timer-controls .timer-digital {
+  cursor: default;
+}
+.timer-analog-clock {
+  position: relative;
+  -webkit-box-shadow: inset 0 0 0.2em #30383b, 0 0 0.1em #161819;
+  -moz-box-shadow: inset 0 0 0.2em #30383b, 0 0 0.1em #161819;
+  box-shadow: inset 0 0 0.2em #30383b, 0 0 0.1em #161819;
+  width: 10.6em;
+  height: 10.6em;
+  margin: 1em auto;
+  border: 0.2em solid #546269;
+  -webkit-border-radius: 6em;
+  -moz-border-radius: 6em;
+  border-radius: 6em;
+  background-color: #617078;
+}
+.timer-clock-marker, .timer-clock-marker::before, .timer-clock-marker::after {
+  display: block;
+  position: absolute;
+  width: 0.2em;
+  -webkit-border-radius: 0.1em;
+  -moz-border-radius: 0.1em;
+  border-radius: 0.1em;
+  background-color: #444f55;
+  -webkit-transform-origin: center 5em;
+  -o-transform-origin: center 5em;
+  -ms-transform-origin: center 5em;
+  -moz-transform-origin: center 5em;
+  transform-origin: center 5em;
+}
+.timer-clock-marker {
+  top: 0.3em;
+  left: 50%;
+  height: 0.6em;
+  margin-left: -0.1em;
+}
+.timer-clock-marker::before, .timer-clock-marker::after {
+  top: 0;
+  left: 0;
+  content: '';
+  height: 0.4em;
+}
+.timer-clock-marker::before {
+  -webkit-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+.timer-clock-marker::after {
+  -webkit-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.timer-clock-marker-tick {
+  color: #444f55;
+  position: absolute;
+  top: 0.8em;
+  left: -0.375em;
+  width: 1em;
+  font-weight: bold;
+  font-size: 0.8em;
+  line-height: 1;
+}
+.timer-clock-marker.timer-clock-marker-15 {
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.timer-clock-marker-15 .timer-clock-marker-tick {
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  text-indent: -0.4em;
+}
+.timer-clock-marker.timer-clock-marker-30 {
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.timer-clock-marker-30 .timer-clock-marker-tick {
+  -webkit-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.timer-clock-marker.timer-clock-marker-45 {
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.timer-clock-marker-45 .timer-clock-marker-tick {
+  -webkit-transform: rotate(-270deg);
+  -o-transform: rotate(-270deg);
+  -ms-transform: rotate(-270deg);
+  -moz-transform: rotate(-270deg);
+  transform: rotate(-270deg);
+  text-indent: 0.2em;
 }
 #book.demo .demo-content {
   overflow: hidden;
