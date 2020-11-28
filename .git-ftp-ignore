@@ -1,4 +1,6 @@
 .git-ftp-ignore
+.git-ftp-include
 .gitignore
 Makefile
 mole.py
+src/*
