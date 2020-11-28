@@ -47,8 +47,8 @@
             <input id="timer-paused" class="timer-toggle timer-paused-toggle" type="radio" name="timer-state" />
             <input id="timer-running" class="timer-toggle timer-running-toggle" type="radio" name="timer-state" />
             <input id="timer-stopped" class="timer-toggle timer-stopped-toggle" type="radio" name="timer-state" checked="checked" />
-            <input id="timer-analog" class="timer-toggle timer-analog-toggle" type="radio" name="timer-mode" />
-            <input id="timer-digital" class="timer-toggle timer-digital-toggle" type="radio" name="timer-mode" checked="checked" />
+            <input id="timer-analog" class="timer-toggle timer-analog-toggle" type="radio" name="timer-mode" checked="checked" />
+            <input id="timer-digital" class="timer-toggle timer-digital-toggle" type="radio" name="timer-mode" />
             <div class="timer-controls">
               <label class="button button-small timer-resume" for="timer-running">Resume</label>
               <label class="button button-small timer-start" for="timer-running">Start</label>
@@ -77,7 +77,7 @@
               <span class="timer-clock-hand timer-clock-hand-hour"></span>
             </div>
             <div class="timer-digital-clock">
-              <span class="timer-clock-digit timer-digit-ten-minute">
+              <span class="timer-clock-digit timer-clock-digit-real timer-ten-minute">
                 <span class="timer-clock-segment timer-clock-segment-0"></span>
                 <span class="timer-clock-segment timer-clock-segment-1"></span>
                 <span class="timer-clock-segment timer-clock-segment-2"></span>
@@ -86,17 +86,33 @@
                 <span class="timer-clock-segment timer-clock-segment-5"></span>
                 <span class="timer-clock-segment timer-clock-segment-6"></span>
               </span>
-              <span class="timer-clock-digit timer-digit-one-minute">
+              <span class="timer-clock-digit timer-clock-digit-real timer-one-minute">
                 <span class="timer-clock-segment timer-clock-segment-0"></span>
                 <span class="timer-clock-segment timer-clock-segment-1"></span>
                 <span class="timer-clock-segment timer-clock-segment-2"></span>
                 <span class="timer-clock-segment timer-clock-segment-3"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-clock-digit-phantom">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-clock-digit-phantom">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
                 <span class="timer-clock-segment timer-clock-segment-4"></span>
                 <span class="timer-clock-segment timer-clock-segment-5"></span>
                 <span class="timer-clock-segment timer-clock-segment-6"></span>
               </span>
               <span class="timer-clock-colon"></span>
-              <span class="timer-clock-digit timer-digit-ten-second">
+              <span class="timer-clock-digit timer-clock-digit-real timer-ten-second">
                 <span class="timer-clock-segment timer-clock-segment-0"></span>
                 <span class="timer-clock-segment timer-clock-segment-1"></span>
                 <span class="timer-clock-segment timer-clock-segment-2"></span>
@@ -105,17 +121,33 @@
                 <span class="timer-clock-segment timer-clock-segment-5"></span>
                 <span class="timer-clock-segment timer-clock-segment-6"></span>
               </span>
-              <span class="timer-clock-digit timer-digit-one-second">
+              <span class="timer-clock-digit timer-clock-digit-real timer-one-second">
                 <span class="timer-clock-segment timer-clock-segment-0"></span>
                 <span class="timer-clock-segment timer-clock-segment-1"></span>
                 <span class="timer-clock-segment timer-clock-segment-2"></span>
                 <span class="timer-clock-segment timer-clock-segment-3"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-clock-digit-phantom">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-clock-digit-phantom">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
                 <span class="timer-clock-segment timer-clock-segment-4"></span>
                 <span class="timer-clock-segment timer-clock-segment-5"></span>
                 <span class="timer-clock-segment timer-clock-segment-6"></span>
               </span>
               <span class="timer-clock-point"></span>
-              <span class="timer-clock-digit timer-digit-hundred-millisecond">
+              <span class="timer-clock-digit timer-clock-digit-real timer-hundred-millisecond">
                 <span class="timer-clock-segment timer-clock-segment-0"></span>
                 <span class="timer-clock-segment timer-clock-segment-1"></span>
                 <span class="timer-clock-segment timer-clock-segment-2"></span>
@@ -124,7 +156,7 @@
                 <span class="timer-clock-segment timer-clock-segment-5"></span>
                 <span class="timer-clock-segment timer-clock-segment-6"></span>
               </span>
-              <span class="timer-clock-digit timer-digit-ten-millisecond">
+              <span class="timer-clock-digit timer-clock-digit-real timer-ten-millisecond">
                 <span class="timer-clock-segment timer-clock-segment-0"></span>
                 <span class="timer-clock-segment timer-clock-segment-1"></span>
                 <span class="timer-clock-segment timer-clock-segment-2"></span>
@@ -133,11 +165,35 @@
                 <span class="timer-clock-segment timer-clock-segment-5"></span>
                 <span class="timer-clock-segment timer-clock-segment-6"></span>
               </span>
-              <span class="timer-clock-digit timer-digit-one-millisecond">
+              <span class="timer-clock-digit timer-clock-digit-real timer-one-millisecond">
                 <span class="timer-clock-segment timer-clock-segment-0"></span>
                 <span class="timer-clock-segment timer-clock-segment-1"></span>
                 <span class="timer-clock-segment timer-clock-segment-2"></span>
                 <span class="timer-clock-segment timer-clock-segment-3"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-clock-digit-phantom">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-clock-digit-phantom">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
+                <span class="timer-clock-segment timer-clock-segment-4"></span>
+                <span class="timer-clock-segment timer-clock-segment-5"></span>
+                <span class="timer-clock-segment timer-clock-segment-6"></span>
+              </span>
+              <span class="timer-clock-digit timer-clock-digit-phantom">
+                <span class="timer-clock-segment timer-clock-segment-0"></span>
+                <span class="timer-clock-segment timer-clock-segment-1"></span>
+                <span class="timer-clock-segment timer-clock-segment-2"></span>
                 <span class="timer-clock-segment timer-clock-segment-4"></span>
                 <span class="timer-clock-segment timer-clock-segment-5"></span>
                 <span class="timer-clock-segment timer-clock-segment-6"></span>

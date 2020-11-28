@@ -340,15 +340,7 @@ h2 {
   bottom: 0.2em;
   background-color: #30383b;
 }
-.timer-clock-hand::before {
-  display: none;
-}
-.timer-clock-hand::after {
-  display: block;
-  -webkit-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  animation-timing-function: linear;
+.timer-clock-hand::after, .timer-clock-digit-real .timer-clock-segment {
   -webkit-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
@@ -357,6 +349,12 @@ h2 {
   -o-animation-play-state: paused;
   -moz-animation-play-state: paused;
   animation-play-state: paused;
+}
+.timer-clock-hand::after {
+  -webkit-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
   -webkit-animation-name: clock;
   -o-animation-name: clock;
   -moz-animation-name: clock;
@@ -396,8 +394,11 @@ h2 {
   transform-origin: center 2.1em;
 }
 .timer-running-toggle:checked ~ .timer-analog-clock .timer-clock-hand::before,
+.timer-running-toggle:checked ~ .timer-digital-clock .timer-clock-digit-phantom,
 .timer-paused-toggle:checked ~ .timer-analog-clock .timer-clock-hand::before,
-.timer-stopped-toggle:checked ~ .timer-analog-clock .timer-clock-hand::after {
+.timer-paused-toggle:checked ~ .timer-digital-clock .timer-clock-digit-phantom,
+.timer-stopped-toggle:checked ~ .timer-analog-clock .timer-clock-hand::after,
+.timer-stopped-toggle:checked ~ .timer-digital-clock .timer-clock-digit-real {
   display: none;
 }
 .timer-running-toggle:checked ~ .timer-analog-clock .timer-clock-hand::after,
@@ -426,7 +427,8 @@ h2 {
   -moz-animation-duration: 3600s;
   animation-duration: 3600s;
 }
-.timer-running-toggle:checked ~ .timer-analog-clock .timer-clock-hand::after {
+.timer-running-toggle:checked ~ .timer-analog-clock .timer-clock-hand::after,
+.timer-running-toggle:checked ~ .timer-digital-clock .timer-clock-segment {
   -webkit-animation-play-state: running;
   -o-animation-play-state: running;
   -moz-animation-play-state: running;
@@ -445,11 +447,23 @@ h2 {
 .timer-clock-digit {
   width: 2.2em;
 }
+.timer-running-toggle:checked ~ .timer-digital-clock .timer-clock-digit-real,
+.timer-paused-toggle:checked ~ .timer-digital-clock .timer-clock-digit-real,
+.timer-stopped-toggle:checked ~ .timer-digital-clock .timer-clock-digit-phantom {
+  display: inline-block;
+}
 .timer-clock-segment {
   display: block;
   position: absolute;
-  width: 1.1em;
-  border-top: 0.3em solid #6f828b;
+  height: 0.3em;
+  border-right: 1.1em solid;
+  border-color: transparent #6f828b transparent #6f828b;
+}
+.timer-clock-digit-real .timer-clock-segment {
+    -webkit-animation-timing-function: step-end;
+  -o-animation-timing-function: step-end;
+  -moz-animation-timing-function: step-end;
+  animation-timing-function: step-end;
 }
 .timer-clock-segment.timer-clock-segment-1,
 .timer-clock-segment.timer-clock-segment-2,
@@ -497,17 +511,18 @@ h2 {
   position: absolute;
   border-style: solid;
 }
+.timer-clock-segment::before, .timer-clock-segment::after {
+  border-color: inherit;
+}
 .timer-clock-segment::before {
-  top: -0.3em;
+  top: -0.05em;
   left: -0.2em;
-  border-width: 0.2em 0.2em 0.1em 0;
-  border-color: transparent #6f828b transparent transparent;
+  border-width: 0.25em 0.3em 0.15em 0;
 }
 .timer-clock-segment::after {
-  right: -0.2em;
-  bottom: 0;
-  border-width: 0.1em 0 0.2em 0.2em;
-  border-color: transparent transparent transparent #6f828b;
+  right: -1.2em;
+  bottom: -0.05em;
+  border-width: 0.15em 0 0.25em 0.2em;
 }
 .timer-clock-colon, .timer-clock-point {
   width: 0.5em;
@@ -529,6 +544,167 @@ h2 {
   left: -0.6em;
   border-widtH: 0 0.25em 0.5em 0.35em;
   border-color: transparent transparent #6f828b transparent;
+}
+.timer-ten-minute .timer-clock-segment-0,
+.timer-ten-second .timer-clock-segment-0 {
+  -webkit-animation-name: six-0;
+  -o-animation-name: six-0;
+  -moz-animation-name: six-0;
+  animation-name: six-0;
+}
+.timer-ten-minute .timer-clock-segment-1,
+.timer-ten-second .timer-clock-segment-1 {
+  -webkit-animation-name: six-1;
+  -o-animation-name: six-1;
+  -moz-animation-name: six-1;
+  animation-name: six-1;
+}
+.timer-ten-minute .timer-clock-segment-2,
+.timer-ten-second .timer-clock-segment-2 {
+  -webkit-animation-name: six-2;
+  -o-animation-name: six-2;
+  -moz-animation-name: six-2;
+  animation-name: six-2;
+}
+.timer-ten-minute .timer-clock-segment-3,
+.timer-ten-second .timer-clock-segment-3 {
+  -webkit-animation-name: six-3;
+  -o-animation-name: six-3;
+  -moz-animation-name: six-3;
+  animation-name: six-3;
+}
+.timer-ten-minute .timer-clock-segment-4,
+.timer-ten-second .timer-clock-segment-4 {
+  -webkit-animation-name: six-4;
+  -o-animation-name: six-4;
+  -moz-animation-name: six-4;
+  animation-name: six-4;
+}
+.timer-ten-minute .timer-clock-segment-5,
+.timer-ten-second .timer-clock-segment-5 {
+  -webkit-animation-name: six-5;
+  -o-animation-name: six-5;
+  -moz-animation-name: six-5;
+  animation-name: six-5;
+}
+.timer-ten-minute .timer-clock-segment-6,
+.timer-ten-second .timer-clock-segment-6 {
+  -webkit-animation-name: six-6;
+  -o-animation-name: six-6;
+  -moz-animation-name: six-6;
+  animation-name: six-6;
+}
+.timer-one-minute .timer-clock-segment-0,
+.timer-one-second .timer-clock-segment-0,
+.timer-hundred-millisecond .timer-clock-segment-0,
+.timer-ten-millisecond .timer-clock-segment-0,
+.timer-one-millisecond .timer-clock-segment-0 {
+  -webkit-animation-name: ten-0;
+  -o-animation-name: ten-0;
+  -moz-animation-name: ten-0;
+  animation-name: ten-0;
+}
+.timer-one-minute .timer-clock-segment-1,
+.timer-one-second .timer-clock-segment-1,
+.timer-hundred-millisecond .timer-clock-segment-1,
+.timer-ten-millisecond .timer-clock-segment-1,
+.timer-one-millisecond .timer-clock-segment-1 {
+  -webkit-animation-name: ten-1;
+  -o-animation-name: ten-1;
+  -moz-animation-name: ten-1;
+  animation-name: ten-1;
+}
+.timer-one-minute .timer-clock-segment-2,
+.timer-one-second .timer-clock-segment-2,
+.timer-hundred-millisecond .timer-clock-segment-2,
+.timer-ten-millisecond .timer-clock-segment-2,
+.timer-one-millisecond .timer-clock-segment-2 {
+  -webkit-animation-name: ten-2;
+  -o-animation-name: ten-2;
+  -moz-animation-name: ten-2;
+  animation-name: ten-2;
+}
+.timer-one-minute .timer-clock-segment-3,
+.timer-one-second .timer-clock-segment-3,
+.timer-hundred-millisecond .timer-clock-segment-3,
+.timer-ten-millisecond .timer-clock-segment-3,
+.timer-one-millisecond .timer-clock-segment-3 {
+  -webkit-animation-name: ten-3;
+  -o-animation-name: ten-3;
+  -moz-animation-name: ten-3;
+  animation-name: ten-3;
+}
+.timer-one-minute .timer-clock-segment-4,
+.timer-one-second .timer-clock-segment-4,
+.timer-hundred-millisecond .timer-clock-segment-4,
+.timer-ten-millisecond .timer-clock-segment-4,
+.timer-one-millisecond .timer-clock-segment-4 {
+  -webkit-animation-name: ten-4;
+  -o-animation-name: ten-4;
+  -moz-animation-name: ten-4;
+  animation-name: ten-4;
+}
+.timer-one-minute .timer-clock-segment-5,
+.timer-one-second .timer-clock-segment-5,
+.timer-hundred-millisecond .timer-clock-segment-5,
+.timer-ten-millisecond .timer-clock-segment-5,
+.timer-one-millisecond .timer-clock-segment-5 {
+  -webkit-animation-name: ten-5;
+  -o-animation-name: ten-5;
+  -moz-animation-name: ten-5;
+  animation-name: ten-5;
+}
+.timer-one-minute .timer-clock-segment-6,
+.timer-one-second .timer-clock-segment-6,
+.timer-hundred-millisecond .timer-clock-segment-6,
+.timer-ten-millisecond .timer-clock-segment-6,
+.timer-one-millisecond .timer-clock-segment-6 {
+  -webkit-animation-name: ten-6;
+  -o-animation-name: ten-6;
+  -moz-animation-name: ten-6;
+  animation-name: ten-6;
+}
+.timer-ten-minute .timer-clock-segment {
+  -webkit-animation-duration: 3600s;
+  -o-animation-duration: 3600s;
+  -moz-animation-duration: 3600s;
+  animation-duration: 3600s;
+}
+.timer-one-minute .timer-clock-segment {
+  -webkit-animation-duration: 600s;
+  -o-animation-duration: 600s;
+  -moz-animation-duration: 600s;
+  animation-duration: 600s;
+}
+.timer-ten-second .timer-clock-segment {
+  -webkit-animation-duration: 60s;
+  -o-animation-duration: 60s;
+  -moz-animation-duration: 60s;
+  animation-duration: 60s;
+}
+.timer-one-second .timer-clock-segment {
+  -webkit-animation-duration: 10s;
+  -o-animation-duration: 10s;
+  -moz-animation-duration: 10s;
+  animation-duration: 10s;
+}
+.timer-hundred-millisecond .timer-clock-segment {
+  -webkit-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.timer-ten-millisecond .timer-clock-segment {
+  -webkit-animation-duration: 100ms;
+  -o-animation-duration: 100ms;
+  -moz-animation-duration: 100ms;
+  animation-duration: 100ms;
+}
+.timer-one-millisecond .timer-clock-segment {
+  -webkit-animation-duration: 10ms;
+  -o-animation-duration: 10ms;
+  -moz-animation-duration: 10ms;
+  animation-duration: 10ms;
 }
 #book.demo .demo-content {
   overflow: hidden;
@@ -1725,6 +1901,718 @@ input.book-page {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes six-0 {
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  66.67% {
+    border-color: transparent;
+  }
+  83.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes six-0 {
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  66.67% {
+    border-color: transparent;
+  }
+  83.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes six-0 {
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  66.67% {
+    border-color: transparent;
+  }
+  83.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes six-0 {
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  66.67% {
+    border-color: transparent;
+  }
+  83.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-webkit-keyframes six-1 {
+  16.67% {
+    border-color: transparent;
+  }
+  66.67% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes six-1 {
+  16.67% {
+    border-color: transparent;
+  }
+  66.67% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes six-1 {
+  16.67% {
+    border-color: transparent;
+  }
+  66.67% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes six-1 {
+  16.67% {
+    border-color: transparent;
+  }
+  66.67% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-webkit-keyframes six-2 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  83.33% {
+    border-color: transparent;
+  }
+}
+@-o-keyframes six-2 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  83.33% {
+    border-color: transparent;
+  }
+}
+@-moz-keyframes six-2 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  83.33% {
+    border-color: transparent;
+  }
+}
+@keyframes six-2 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  83.33% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes six-3 {
+  0% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes six-3 {
+  0% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes six-3 {
+  0% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes six-3 {
+  0% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-webkit-keyframes six-4 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@-o-keyframes six-4 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@-moz-keyframes six-4 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes six-4 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes six-5 {
+  33.33% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes six-5 {
+  33.33% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes six-5 {
+  33.33% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes six-5 {
+  33.33% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-webkit-keyframes six-6 {
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  66.67% {
+    border-color: transparent;
+  }
+  83.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes six-6 {
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  66.67% {
+    border-color: transparent;
+  }
+  83.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes six-6 {
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  66.67% {
+    border-color: transparent;
+  }
+  83.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes six-6 {
+  16.67% {
+    border-color: transparent;
+  }
+  33.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  66.67% {
+    border-color: transparent;
+  }
+  83.33% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-webkit-keyframes ten-0 {
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  40% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes ten-0 {
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  40% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes ten-0 {
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  40% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes ten-0 {
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  40% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-webkit-keyframes ten-1 {
+  10% {
+    border-color: transparent;
+  }
+  40% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes ten-1 {
+  10% {
+    border-color: transparent;
+  }
+  40% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes ten-1 {
+  10% {
+    border-color: transparent;
+  }
+  40% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes ten-1 {
+  10% {
+    border-color: transparent;
+  }
+  40% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-webkit-keyframes ten-2 {
+  50% {
+    border-color: transparent;
+  }
+  70% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes ten-2 {
+  50% {
+    border-color: transparent;
+  }
+  70% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes ten-2 {
+  50% {
+    border-color: transparent;
+  }
+  70% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes ten-2 {
+  50% {
+    border-color: transparent;
+  }
+  70% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-webkit-keyframes ten-3 {
+  0% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes ten-3 {
+  0% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes ten-3 {
+  0% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes ten-3 {
+  0% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-webkit-keyframes ten-4 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  30% {
+    border-color: transparent;
+  }
+  60% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  90% {
+    border-color: transparent;
+  }
+}
+@-o-keyframes ten-4 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  30% {
+    border-color: transparent;
+  }
+  60% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  90% {
+    border-color: transparent;
+  }
+}
+@-moz-keyframes ten-4 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  30% {
+    border-color: transparent;
+  }
+  60% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  90% {
+    border-color: transparent;
+  }
+}
+@keyframes ten-4 {
+  0% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  30% {
+    border-color: transparent;
+  }
+  60% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  90% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes ten-5 {
+  20% {
+    border-color: transparent;
+  }
+  30% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes ten-5 {
+  20% {
+    border-color: transparent;
+  }
+  30% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes ten-5 {
+  20% {
+    border-color: transparent;
+  }
+  30% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes ten-5 {
+  20% {
+    border-color: transparent;
+  }
+  30% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-webkit-keyframes ten-6 {
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  40% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-o-keyframes ten-6 {
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  40% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@-moz-keyframes ten-6 {
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  40% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+}
+@keyframes ten-6 {
+  10% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  40% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent #6f828b transparent #6f828b;
+  }
+  70% {
+    border-color: transparent;
+  }
+  80% {
+    border-color: transparent #6f828b transparent #6f828b;
   }
 }
 @-webkit-keyframes hammer {
