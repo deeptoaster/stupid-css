@@ -10,45 +10,31 @@
     <h1>This page contains no JavaScript or images.</h1>
     <div class="demos">
       <div class="demo-float">
-        <div class="demo">
+        <div id="double-click" class="demo">
           <div class="demo-content">
             <h2>Double-Click Handler</h2>
+            <input id="double-click-single-0-toggle" class="toggle double-click-toggle double-click-single-0-toggle" type="radio" name="double-click-state" />
+            <input id="double-click-single-1-toggle" class="toggle double-click-toggle double-click-single-1-toggle" type="radio" name="double-click-state" />
+            <input id="double-click-double-toggle" class="toggle double-click-toggle double-click-double-toggle" type="radio" name="double-click-state" />
             <span class="button double-click-button">
-              <span class="double-click-container">
-                <span class="double-click-scroll">
-                  <span class="double-click-option">
-                    <span class="double-click-buffer">
-                      <span class="double-click-label">Click Fast</span>
-                    </span>
-                    <a class="double-click-filler" href="#single-click"></a>
-                  </span>
-                  <span class="double-click-option">
-                    <span class="double-click-buffer">
-                      <span class="double-click-label">Single-Clicked</span>
-                    </span>
-                    <a id="single-click" class="double-click-anchor" href="#double-click"></a>
-                    <a class="double-click-filler" href="#single-click"></a>
-                  </span>
-                  <span class="double-click-option">
-                    <span class="double-click-buffer">
-                      <span class="double-click-label">Double-Clicked</span>
-                    </span>
-                    <a id="double-click" class="double-click-anchor" href="#double-click"></a>
-                    <a class="double-click-filler" href="#single-click"></a>
-                  </span>
-                </span>
-              </span>
+              <label class="double-click-label double-click-none" for="double-click-single-0-toggle">Click Fast</label>
+              <label class="double-click-label double-click-single-0 double-click-unmask" for="double-click-double-toggle">Single-Clicked</label>
+              <label class="double-click-label double-click-single-0 double-click-mask" for="double-click-single-1-toggle">Single-Clicked</label>
+              <label class="double-click-label double-click-single-1 double-click-unmask" for="double-click-double-toggle">Single-Clicked</label>
+              <label class="double-click-label double-click-single-1 double-click-mask" for="double-click-single-0-toggle">Single-Clicked</label>
+              <label class="double-click-label double-click-double double-click-unmask" for="double-click-double-toggle">Double-Clicked</label>
+              <label class="double-click-label double-click-double double-click-mask" for="double-click-single-0-toggle">Double-Clicked</label>
             </span>
           </div>
         </div>
         <div id="timer" class="demo demo-2x1">
           <div class="demo-content">
             <h2>Timer</h2>
-            <input id="timer-paused" class="timer-toggle timer-paused-toggle" type="radio" name="timer-state" />
-            <input id="timer-running" class="timer-toggle timer-running-toggle" type="radio" name="timer-state" />
-            <input id="timer-stopped" class="timer-toggle timer-stopped-toggle" type="radio" name="timer-state" checked="checked" />
-            <input id="timer-analog" class="timer-toggle timer-analog-toggle" type="radio" name="timer-mode" checked="checked" />
-            <input id="timer-digital" class="timer-toggle timer-digital-toggle" type="radio" name="timer-mode" />
+            <input id="timer-paused" class="toggle timer-paused-toggle" type="radio" name="timer-state" />
+            <input id="timer-running" class="toggle timer-running-toggle" type="radio" name="timer-state" />
+            <input id="timer-stopped" class="toggle timer-stopped-toggle" type="radio" name="timer-state" checked="checked" />
+            <input id="timer-analog" class="toggle timer-analog-toggle" type="radio" name="timer-mode" checked="checked" />
+            <input id="timer-digital" class="toggle timer-digital-toggle" type="radio" name="timer-mode" />
             <div class="timer-controls">
               <label class="button button-small timer-resume" for="timer-running">Resume</label>
               <label class="button button-small timer-start" for="timer-running">Start</label>
@@ -205,25 +191,25 @@
       <div id="book" class="demo demo-float demo-2x1">
         <form class="demo-content">
           <h2>Bookshelf</h2>
-          <input id="book-lipsum-page-1-toggle" class="book-page-toggle book-lipsum-toggle book-page-1-toggle" type="radio" name="book-lipsum-page-toggle" />
-          <input id="book-lipsum-page-2-toggle" class="book-page-toggle book-lipsum-toggle book-page-2-toggle" type="radio" name="book-lipsum-page-toggle" />
-          <input id="book-lipsum-page-3-toggle" class="book-page-toggle book-lipsum-toggle book-page-3-toggle" type="radio" name="book-lipsum-page-toggle" />
-          <input id="book-lipsum-page-4-toggle" class="book-page-toggle book-lipsum-toggle book-page-4-toggle" type="radio" name="book-lipsum-page-toggle" />
-          <input class="book-page-toggle book-lipsum-toggle" type="radio" name="book-lipsum-page-toggle" />
-          <input id="book-humpty-page-1-toggle" class="book-page-toggle book-humpty-toggle book-page-1-toggle" type="radio" name="book-humpty-page-toggle" />
-          <input id="book-humpty-page-2-toggle" class="book-page-toggle book-humpty-toggle book-page-2-toggle" type="radio" name="book-humpty-page-toggle" />
-          <input id="book-humpty-page-3-toggle" class="book-page-toggle book-humpty-toggle book-page-3-toggle" type="radio" name="book-humpty-page-toggle" />
-          <input id="book-humpty-page-4-toggle" class="book-page-toggle book-humpty-toggle book-page-4-toggle" type="radio" name="book-humpty-page-toggle" />
-          <input id="book-humpty-page-5-toggle" class="book-page-toggle book-humpty-toggle book-page-5-toggle" type="radio" name="book-humpty-page-toggle" />
-          <input id="book-humpty-page-6-toggle" class="book-page-toggle book-humpty-toggle book-page-6-toggle" type="radio" name="book-humpty-page-toggle" />
-          <input class="book-page-toggle book-humpty-toggle" type="radio" name="book-humpty-page-toggle" />
-          <input id="book-died-page-1-toggle" class="book-page-toggle book-died-toggle book-page-1-toggle" type="radio" name="book-died-page-toggle" />
-          <input id="book-died-page-2-toggle" class="book-page-toggle book-died-toggle book-page-2-toggle" type="radio" name="book-died-page-toggle" />
-          <input id="book-died-page-3-toggle" class="book-page-toggle book-died-toggle book-page-3-toggle" type="radio" name="book-died-page-toggle" />
-          <input id="book-died-page-4-toggle" class="book-page-toggle book-died-toggle book-page-4-toggle" type="radio" name="book-died-page-toggle" />
-          <input id="book-died-page-5-toggle" class="book-page-toggle book-died-toggle book-page-5-toggle" type="radio" name="book-died-page-toggle" />
-          <input id="book-died-page-6-toggle" class="book-page-toggle book-died-toggle book-page-6-toggle" type="radio" name="book-died-page-toggle" />
-          <input class="book-page-toggle book-died-toggle" type="radio" name="book-died-page-toggle" />
+          <input id="book-lipsum-page-1-toggle" class="toggle book-page-toggle book-lipsum-toggle book-page-1-toggle" type="radio" name="book-lipsum-page" />
+          <input id="book-lipsum-page-2-toggle" class="toggle book-page-toggle book-lipsum-toggle book-page-2-toggle" type="radio" name="book-lipsum-page" />
+          <input id="book-lipsum-page-3-toggle" class="toggle book-page-toggle book-lipsum-toggle book-page-3-toggle" type="radio" name="book-lipsum-page" />
+          <input id="book-lipsum-page-4-toggle" class="toggle book-page-toggle book-lipsum-toggle book-page-4-toggle" type="radio" name="book-lipsum-page" />
+          <input class="toggle book-page-toggle book-lipsum-toggle" type="radio" name="book-lipsum-page-toggle" />
+          <input id="book-humpty-page-1-toggle" class="toggle book-page-toggle book-humpty-toggle book-page-1-toggle" type="radio" name="book-humpty-page" />
+          <input id="book-humpty-page-2-toggle" class="toggle book-page-toggle book-humpty-toggle book-page-2-toggle" type="radio" name="book-humpty-page" />
+          <input id="book-humpty-page-3-toggle" class="toggle book-page-toggle book-humpty-toggle book-page-3-toggle" type="radio" name="book-humpty-page" />
+          <input id="book-humpty-page-4-toggle" class="toggle book-page-toggle book-humpty-toggle book-page-4-toggle" type="radio" name="book-humpty-page" />
+          <input id="book-humpty-page-5-toggle" class="toggle book-page-toggle book-humpty-toggle book-page-5-toggle" type="radio" name="book-humpty-page" />
+          <input id="book-humpty-page-6-toggle" class="toggle book-page-toggle book-humpty-toggle book-page-6-toggle" type="radio" name="book-humpty-page" />
+          <input class="toggle book-page-toggle book-humpty-toggle" type="radio" name="book-humpty-page-toggle" />
+          <input id="book-died-page-1-toggle" class="toggle book-page-toggle book-died-toggle book-page-1-toggle" type="radio" name="book-died-page" />
+          <input id="book-died-page-2-toggle" class="toggle book-page-toggle book-died-toggle book-page-2-toggle" type="radio" name="book-died-page" />
+          <input id="book-died-page-3-toggle" class="toggle book-page-toggle book-died-toggle book-page-3-toggle" type="radio" name="book-died-page" />
+          <input id="book-died-page-4-toggle" class="toggle book-page-toggle book-died-toggle book-page-4-toggle" type="radio" name="book-died-page" />
+          <input id="book-died-page-5-toggle" class="toggle book-page-toggle book-died-toggle book-page-5-toggle" type="radio" name="book-died-page" />
+          <input id="book-died-page-6-toggle" class="toggle book-page-toggle book-died-toggle book-page-6-toggle" type="radio" name="book-died-page" />
+          <input class="toggle book-page-toggle book-died-toggle" type="radio" name="book-died-page-toggle" />
           <input class="book-reset" type="reset" />
           <div class="book book-lipsum">
             <label class="book-page book-page-0" for="book-lipsum-page-1-toggle">
@@ -292,11 +278,11 @@ And covered up&mdash;Our names&mdash;" />
                   <a class="browser-item browser-item-directory" href="#/dev">dev</a>
                   <a class="browser-item browser-item-directory" href="#/etc">etc</a>
                   <a class="browser-item browser-item-directory" href="#/home">home</a>
-                  <input id="home" class="browser-directory-toggle" type="checkbox" />
+                  <input id="home" class="toggle browser-directory-toggle" type="checkbox" />
                   <label class="browser-directory-arrow" for="home"></label>
                   <div class="browser-directory-folder">
                     <a class="browser-item browser-item-directory" href="#/home/johndoe">johndoe</a>
-                    <input id="home-johndoe" class="browser-directory-toggle" type="checkbox" />
+                    <input id="home-johndoe" class="toggle browser-directory-toggle" type="checkbox" />
                     <label class="browser-directory-arrow" for="home-johndoe"></label>
                     <div class="browser-directory-folder">
                       <a class="browser-item browser-item-directory" href="#/home/johndoe/Desktop">Desktop</a>
@@ -513,7 +499,7 @@ And covered up&mdash;Our names&mdash;" />
       <div id="mole" class="demo demo-float demo-1x2">
         <form class="demo-content">
           <h2>Whac-A-Mole</h2>
-          <input id="mole-title-toggle" class="mole-title-toggle" type="checkbox" checked="checked" />
+          <input id="mole-title-toggle" class="toggle mole-title-toggle" type="checkbox" checked="checked" />
           <div class="mole-title">
             <p class="mole-title-chunks">
               <span class="mole-title-far-left">Wha</span>
@@ -525,34 +511,34 @@ And covered up&mdash;Our names&mdash;" />
             <label class="button mole-start-button" for="mole-title-toggle">Play</label>
           </div>
           <div class="mole-game">
-            <input id="mole-hole-far-left-toggle" class="mole-hole-toggle" type="checkbox" />
+            <input id="mole-hole-far-left-toggle" class="toggle mole-hole-toggle" type="checkbox" />
             <label class="mole-hole mole-hole-far-left" for="mole-hole-far-left-toggle"></label>
             <div class="mole-hole mole-hole-far-left"></div>
-            <input id="mole-hole-center-left-toggle" class="mole-hole-toggle" type="checkbox" />
+            <input id="mole-hole-center-left-toggle" class="toggle mole-hole-toggle" type="checkbox" />
             <label class="mole-hole mole-hole-center-left" for="mole-hole-center-left-toggle"></label>
             <div class="mole-hole mole-hole-center-left"></div>
-            <input id="mole-hole-center-toggle" class="mole-hole-toggle" type="checkbox" />
+            <input id="mole-hole-center-toggle" class="toggle mole-hole-toggle" type="checkbox" />
             <label class="mole-hole mole-hole-center" for="mole-hole-center-toggle"></label>
             <div class="mole-hole mole-hole-center"></div>
-            <input id="mole-hole-center-right-toggle" class="mole-hole-toggle" type="checkbox" />
+            <input id="mole-hole-center-right-toggle" class="toggle mole-hole-toggle" type="checkbox" />
             <label class="mole-hole mole-hole-center-right" for="mole-hole-center-right-toggle"></label>
             <div class="mole-hole mole-hole-center-right"></div>
-            <input id="mole-hole-far-right-toggle" class="mole-hole-toggle" type="checkbox" />
+            <input id="mole-hole-far-right-toggle" class="toggle mole-hole-toggle" type="checkbox" />
             <label class="mole-hole mole-hole-far-right" for="mole-hole-far-right-toggle"></label>
             <div class="mole-hole mole-hole-far-right"></div>
-            <input id="mole-mole-0-toggle" class="mole-mole-toggle" type="checkbox" />
+            <input id="mole-mole-0-toggle" class="toggle mole-mole-toggle" type="checkbox" />
             <label class="mole-mole mole-mole-0" for="mole-mole-0-toggle"></label>
-            <input id="mole-mole-1-toggle" class="mole-mole-toggle" type="checkbox" />
+            <input id="mole-mole-1-toggle" class="toggle mole-mole-toggle" type="checkbox" />
             <label class="mole-mole mole-mole-1" for="mole-mole-1-toggle"></label>
-            <input id="mole-mole-2-toggle" class="mole-mole-toggle" type="checkbox" />
+            <input id="mole-mole-2-toggle" class="toggle mole-mole-toggle" type="checkbox" />
             <label class="mole-mole mole-mole-2" for="mole-mole-2-toggle"></label>
-            <input id="mole-mole-3-toggle" class="mole-mole-toggle" type="checkbox" />
+            <input id="mole-mole-3-toggle" class="toggle mole-mole-toggle" type="checkbox" />
             <label class="mole-mole mole-mole-3" for="mole-mole-3-toggle"></label>
-            <input id="mole-mole-4-toggle" class="mole-mole-toggle" type="checkbox" />
+            <input id="mole-mole-4-toggle" class="toggle mole-mole-toggle" type="checkbox" />
             <label class="mole-mole mole-mole-4" for="mole-mole-4-toggle"></label>
             <p class="mole-score">current score</p>
             <label class="button button-small mole-help-button" for="mole-help-toggle">pause/help</label>
-            <input id="mole-help-toggle" class="mole-help-toggle" type="checkbox" />
+            <input id="mole-help-toggle" class="toggle mole-help-toggle" type="checkbox" />
             <div class="mole-modal mole-help-modal">
               <p>Five moles and five holes. Click on the moles to hit them as they pop out. Be careful though&mdash;if you hit a hole when a mole isn't there, you damage the hole!</p>
               <input class="button mole-restart-button" type="reset" value="Restart" />
@@ -573,7 +559,7 @@ And covered up&mdash;Our names&mdash;" />
         <div class="demo-content">
           <h2>Modal Dialog</h2>
           <label class="button modal-button" for="modal-toggle">Open Dialog</label>
-          <input id="modal-toggle" class="modal-toggle" type="checkbox" />
+          <input id="modal-toggle" class="toggle modal-toggle" type="checkbox" />
           <div class="modal-dialog">
             <label class="modal-background" for="modal-toggle"></label>
             <div class="modal-content">
