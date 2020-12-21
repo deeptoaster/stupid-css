@@ -1019,11 +1019,11 @@ input.book-page {
   transition: none;
 }
 .mole-hole, .mole-mole {
+  display: block;
+  position: absolute;
   cursor: crosshair;
 }
 .mole-hole {
-  display: block;
-  position: absolute;
   width: 4.4em;
   height: 2.7em;
   border: 0.3em solid #30383b;
@@ -1121,7 +1121,6 @@ input.book-page {
   left: 29em;
 }
 .mole-mole {
-  position: absolute;
   top: -8em;
   left: 0;
   width: 5em;
@@ -1130,6 +1129,9 @@ input.book-page {
   animation-duration: 300s;
   animation-iteration-count: infinite;
   animation-timing-function: step-end;
+}
+.mole-mole:active {
+  animation-play-state: paused;
 }
 .mole-mole.mole-mole-1 {
   animation-delay: -60s;
