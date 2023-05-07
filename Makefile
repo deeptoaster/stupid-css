@@ -1,4 +1,4 @@
-slides:
+css:
 	postcss src/css.css --use autoprefixer > css.css
 
 clean:
