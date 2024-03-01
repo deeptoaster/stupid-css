@@ -401,13 +401,13 @@ h2 {
 .timer-clock-colon::before {
   top: 1.4em;
   left: -0.3em;
-  border-widtH: 0.5em 0.35em 0 0.25em;
+  border-width: 0.5em 0.35em 0 0.25em;
   border-color: #6f828b transparent transparent transparent;
 }
 .timer-clock-colon::after, .timer-clock-point::after {
   top: 2.9em;
   left: -0.6em;
-  border-widtH: 0 0.25em 0.5em 0.35em;
+  border-width: 0 0.25em 0.5em 0.35em;
   border-color: transparent transparent #6f828b transparent;
 }
 .timer-ten-minute .timer-clock-segment-0,
