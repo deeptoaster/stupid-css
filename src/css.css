@@ -4,8 +4,11 @@ body {
   color: #617078;
   text-align: center;
 }
-body, input {
-  font: 12px/1.5 'Titillium Web', sans-serif;
+body,
+input {
+  font:
+    12px/1.5 'Titillium Web',
+    sans-serif;
 }
 h1 {
   height: 1em;
@@ -24,7 +27,8 @@ h2 {
   background-color: #30383b;
   font-size: 1em;
 }
-.button, .double-click-button a {
+.button,
+.double-click-button a {
   color: #3d484c;
   text-decoration: none;
 }
@@ -93,10 +97,12 @@ h2 {
   height: 9em;
   background-color: #22282a;
 }
-.demo.demo-2x1 .demo-content, .demo.demo-2x2 .demo-content {
+.demo.demo-2x1 .demo-content,
+.demo.demo-2x2 .demo-content {
   height: 19em;
 }
-.demo.demo-1x2 .demo-content, .demo.demo-2x2 .demo-content {
+.demo.demo-1x2 .demo-content,
+.demo.demo-2x2 .demo-content {
   width: 39em;
 }
 #double-click.demo .demo-content {
@@ -114,10 +120,18 @@ h2 {
   display: none;
 }
 .double-click-none,
-.double-click-single-0-toggle:checked ~ .double-click-button .double-click-single-0,
-.double-click-single-0-toggle:checked ~ .double-click-button .double-click-single-0,
-.double-click-single-1-toggle:checked ~ .double-click-button .double-click-single-1,
-.double-click-double-toggle:checked ~ .double-click-button .double-click-double {
+.double-click-single-0-toggle:checked
+  ~ .double-click-button
+  .double-click-single-0,
+.double-click-single-0-toggle:checked
+  ~ .double-click-button
+  .double-click-single-0,
+.double-click-single-1-toggle:checked
+  ~ .double-click-button
+  .double-click-single-1,
+.double-click-double-toggle:checked
+  ~ .double-click-button
+  .double-click-double {
   display: block;
 }
 .double-click-label {
@@ -148,7 +162,9 @@ h2 {
 .timer-controls .button {
   width: 3.5em;
 }
-.timer-resume, .timer-start, .timer-stop {
+.timer-resume,
+.timer-start,
+.timer-stop {
   display: none;
 }
 .timer-paused-toggle:checked ~ .timer-controls .timer-resume,
@@ -168,7 +184,9 @@ h2 {
   position: absolute;
   top: 1em;
   left: 4em;
-  box-shadow: inset 0 0 0.2em #30383b, 0 0 0.1em #161819;
+  box-shadow:
+    inset 0 0 0.2em #30383b,
+    0 0 0.1em #161819;
   width: 10.6em;
   height: 10.6em;
   margin: auto;
@@ -176,7 +194,9 @@ h2 {
   border-radius: 6em;
   background-color: #617078;
 }
-.timer-clock-marker, .timer-clock-marker::before, .timer-clock-marker::after {
+.timer-clock-marker,
+.timer-clock-marker::before,
+.timer-clock-marker::after {
   display: block;
   position: absolute;
   width: 0.2em;
@@ -190,7 +210,8 @@ h2 {
   height: 0.6em;
   margin-left: -0.1em;
 }
-.timer-clock-marker::before, .timer-clock-marker::after {
+.timer-clock-marker::before,
+.timer-clock-marker::after {
   top: 0;
   left: 0;
   content: '';
@@ -250,7 +271,8 @@ h2 {
   bottom: 0.2em;
   background-color: #30383b;
 }
-.timer-clock-hand::after, .timer-clock-digit-real .timer-clock-segment {
+.timer-clock-hand::after,
+.timer-clock-digit-real .timer-clock-segment {
   animation-iteration-count: infinite;
   animation-play-state: paused;
 }
@@ -292,16 +314,28 @@ h2 {
 .timer-stopped-toggle:checked ~ .timer-analog-clock .timer-clock-hand::before {
   display: block;
 }
-.timer-running-toggle:checked ~ .timer-analog-clock .timer-clock-hand-second::after,
-.timer-paused-toggle:checked ~ .timer-analog-clock .timer-clock-hand-second::after {
+.timer-running-toggle:checked
+  ~ .timer-analog-clock
+  .timer-clock-hand-second::after,
+.timer-paused-toggle:checked
+  ~ .timer-analog-clock
+  .timer-clock-hand-second::after {
   animation-duration: 1s;
 }
-.timer-running-toggle:checked ~ .timer-analog-clock .timer-clock-hand-minute::after,
-.timer-paused-toggle:checked ~ .timer-analog-clock .timer-clock-hand-minute::after {
+.timer-running-toggle:checked
+  ~ .timer-analog-clock
+  .timer-clock-hand-minute::after,
+.timer-paused-toggle:checked
+  ~ .timer-analog-clock
+  .timer-clock-hand-minute::after {
   animation-duration: 60s;
 }
-.timer-running-toggle:checked ~ .timer-analog-clock .timer-clock-hand-hour::after,
-.timer-paused-toggle:checked ~ .timer-analog-clock .timer-clock-hand-hour::after {
+.timer-running-toggle:checked
+  ~ .timer-analog-clock
+  .timer-clock-hand-hour::after,
+.timer-paused-toggle:checked
+  ~ .timer-analog-clock
+  .timer-clock-hand-hour::after {
   animation-duration: 3600s;
 }
 .timer-running-toggle:checked ~ .timer-analog-clock .timer-clock-hand::after,
@@ -314,7 +348,9 @@ h2 {
   left: 1.7em;
   font-size: 0.9em;
 }
-.timer-clock-digit, .timer-clock-colon, .timer-clock-point {
+.timer-clock-digit,
+.timer-clock-colon,
+.timer-clock-point {
   display: inline-block;
   position: relative;
 }
@@ -323,7 +359,9 @@ h2 {
 }
 .timer-running-toggle:checked ~ .timer-digital-clock .timer-clock-digit-real,
 .timer-paused-toggle:checked ~ .timer-digital-clock .timer-clock-digit-real,
-.timer-stopped-toggle:checked ~ .timer-digital-clock .timer-clock-digit-phantom {
+.timer-stopped-toggle:checked
+  ~ .timer-digital-clock
+  .timer-clock-digit-phantom {
   display: inline-block;
 }
 .timer-clock-segment {
@@ -370,15 +408,18 @@ h2 {
   top: 3.1em;
   left: 0;
 }
-.timer-clock-segment::before, .timer-clock-segment::after,
-.timer-clock-colon::before, .timer-clock-colon::after,
+.timer-clock-segment::before,
+.timer-clock-segment::after,
+.timer-clock-colon::before,
+.timer-clock-colon::after,
 .timer-clock-point::after {
   content: '';
   display: block;
   position: absolute;
   border-style: solid;
 }
-.timer-clock-segment::before, .timer-clock-segment::after {
+.timer-clock-segment::before,
+.timer-clock-segment::after {
   border-color: inherit;
 }
 .timer-clock-segment::before {
@@ -391,10 +432,12 @@ h2 {
   bottom: -0.05em;
   border-width: 0.15em 0 0.25em 0.2em;
 }
-.timer-clock-colon, .timer-clock-point {
+.timer-clock-colon,
+.timer-clock-point {
   width: 0.5em;
 }
-.timer-clock-colon::before, .timer-clock-colon::after,
+.timer-clock-colon::before,
+.timer-clock-colon::after,
 .timer-clock-point::after {
   border-radius: 0.1em;
 }
@@ -404,7 +447,8 @@ h2 {
   border-width: 0.5em 0.35em 0 0.25em;
   border-color: #6f828b transparent transparent transparent;
 }
-.timer-clock-colon::after, .timer-clock-point::after {
+.timer-clock-colon::after,
+.timer-clock-point::after {
   top: 2.9em;
   left: -0.6em;
   border-width: 0 0.25em 0.5em 0.35em;
@@ -523,7 +567,8 @@ h2 {
   background-color: transparent;
   color: transparent;
 }
-.book, .book-page {
+.book,
+.book-page {
   width: 8em;
   height: 11em;
 }
@@ -532,7 +577,9 @@ h2 {
   position: absolute;
   top: 7em;
   font-size: 0.64em;
-  transition: all 800ms, opacity 800ms 400ms;
+  transition:
+    all 800ms,
+    opacity 800ms 400ms;
 }
 .book.book-lipsum {
   left: 1.84375em;
@@ -577,8 +624,10 @@ input.book-page {
   font-size: 0.64em;
 }
 .book-page.book-page-0,
-.book-page-0::before, .book-decoration::before,
-.book-page-0::after, .book-decoration::after {
+.book-page-0::before,
+.book-decoration::before,
+.book-page-0::after,
+.book-decoration::after {
   background-color: #546269;
 }
 .book-page.book-page-0 {
@@ -594,14 +643,17 @@ input.book-page {
   font-size: 0.8em;
 }
 .book-decoration,
-.book-page-0::before, .book-decoration::before,
-.book-page-0::after, .book-decoration::after {
+.book-page-0::before,
+.book-decoration::before,
+.book-page-0::after,
+.book-decoration::after {
   display: block;
   position: absolute;
   border: 0.2em double #30383b;
 }
 .book-small .book-decoration,
-.book-small .book-page-0::before, .book-small .book-page-0::after {
+.book-small .book-page-0::before,
+.book-small .book-page-0::after {
   font-size: 1.5625em;
 }
 .book-decoration {
@@ -611,8 +663,10 @@ input.book-page {
   left: 0.5em;
   border-radius: 1.5em;
 }
-.book-page-0::before, .book-decoration::before,
-.book-page-0::after, .book-decoration::after {
+.book-page-0::before,
+.book-decoration::before,
+.book-page-0::after,
+.book-decoration::after {
   content: '';
   width: 1em;
   height: 1em;
@@ -620,7 +674,8 @@ input.book-page {
   border-style: double double none none;
   z-index: 1;
 }
-.book-page-0::before, .book-page-0::after {
+.book-page-0::before,
+.book-page-0::after {
   top: 0.45em;
   font-size: 1em;
 }
@@ -631,7 +686,8 @@ input.book-page {
 .book-page-0::after {
   right: 0.45em;
 }
-.book-decoration::before, .book-decoration::after {
+.book-decoration::before,
+.book-decoration::after {
   bottom: -0.25em;
 }
 .book-decoration::before {
@@ -688,7 +744,9 @@ input.book-page {
   box-shadow: 0 0 0.1em #161819;
   color: transparent;
   transform: perspective(20em) rotateY(-180deg);
-  transition: color linear 0ms 400ms, transform ease-in-out 800ms;
+  transition:
+    color linear 0ms 400ms,
+    transform ease-in-out 800ms;
 }
 .book-lipsum-toggle:checked ~ .book-humpty .book-page,
 .book-lipsum-toggle:checked ~ .book-died .book-page,
@@ -749,22 +807,33 @@ input.book-page {
 #browser.demo .demo-content {
   overflow: hidden;
 }
-.browser-sidebar, .browser-content, .browser-directory, .browser-pane,
+.browser-sidebar,
+.browser-content,
+.browser-directory,
+.browser-pane,
 .browser-preview {
   height: 20.625em;
 }
-.browser-sidebar, .browser-content, .browser-pane, .browser-sidebar a,
-.browser-content a, .browser-pane a {
+.browser-sidebar,
+.browser-content,
+.browser-pane,
+.browser-sidebar a,
+.browser-content a,
+.browser-pane a {
   color: #22282a;
 }
-.browser-sidebar, .browser-content, .browser-pane {
+.browser-sidebar,
+.browser-content,
+.browser-pane {
   font-size: 0.8em;
 }
-.browser-sidebar, .browser-content {
+.browser-sidebar,
+.browser-content {
   text-align: left;
   line-height: 1.8;
 }
-.browser-sidebar, .browser-pane {
+.browser-sidebar,
+.browser-pane {
   position: absolute;
   top: 0;
 }
@@ -784,7 +853,8 @@ input.book-page {
 .browser-sidebar h3:first-child {
   padding-top: 0.3em;
 }
-.browser-sidebar a, .browser-content a {
+.browser-sidebar a,
+.browser-content a {
   text-decoration: none;
   cursor: default;
 }
@@ -793,10 +863,13 @@ input.book-page {
   height: 1.8em;
   padding-left: 1em;
 }
-.browser-sidebar a:active, .browser-sidebar a.active,
+.browser-sidebar a:active,
+.browser-sidebar a.active,
 .browser-content a:active,
-.browser-content a:active + .browser-directory-toggle +
-.browser-directory-arrow {
+.browser-content
+  a:active
+  + .browser-directory-toggle
+  + .browser-directory-arrow {
   background-color: #30383b;
   color: #617078;
 }
@@ -890,8 +963,9 @@ input.book-page {
   display: none;
   margin-left: 1.3em;
 }
-.browser-directory-toggle:checked + .browser-directory-arrow +
-.browser-directory-folder {
+.browser-directory-toggle:checked
+  + .browser-directory-arrow
+  + .browser-directory-folder {
   display: block;
 }
 .browser-pane {
@@ -962,10 +1036,10 @@ input.book-page {
   color: #546269;
   font-size: 1.5em;
   text-shadow:
-      -1px -1px 0 #22282a,
-      1px -1px 0 #22282a,
-      -1px 1px 0 #22282a,
-      1px 1px 0 #22282a;
+    -1px -1px 0 #22282a,
+    1px -1px 0 #22282a,
+    -1px 1px 0 #22282a,
+    1px 1px 0 #22282a;
   letter-spacing: 0.2em;
   word-spacing: -0.4em;
   transition: top 400ms cubic-bezier(0.36, 0, 0.66, -0.56);
@@ -974,11 +1048,13 @@ input.book-page {
   top: 0;
   transition: none;
 }
-.mole-title-far-left, .mole-title-center-left {
+.mole-title-far-left,
+.mole-title-center-left {
   display: inline-block;
   transform-origin: bottom right;
 }
-.mole-title-center-right, .mole-title-far-right {
+.mole-title-center-right,
+.mole-title-far-right {
   display: inline-block;
   transform-origin: bottom left;
 }
@@ -1018,7 +1094,8 @@ input.book-page {
   opacity: 0;
   transition: none;
 }
-.mole-hole, .mole-mole {
+.mole-hole,
+.mole-mole {
   display: block;
   position: absolute;
   cursor: crosshair;
@@ -1044,15 +1121,20 @@ input.book-page {
 .mole-hole-toggle:checked + .mole-hole + .mole-hole {
   display: block;
 }
-.mole-hole::before, .mole-hole::after, .mole-mole::before, .mole-mole::after,
-.mole-mole:active::before, .mole-mole:active::after {
+.mole-hole::before,
+.mole-hole::after,
+.mole-mole::before,
+.mole-mole::after,
+.mole-mole:active::before,
+.mole-mole:active::after {
   content: '';
   display: block;
   position: absolute;
   border-radius: 0.5em;
   transform: rotate(-30deg);
 }
-.mole-hole::before, .mole-mole:active::before {
+.mole-hole::before,
+.mole-mole:active::before {
   top: -8em;
   left: 4.5em;
   width: 1em;
@@ -1060,7 +1142,8 @@ input.book-page {
   background-color: #30383b;
   transform-origin: bottom right;
 }
-.mole-hole::after, .mole-mole:active::after {
+.mole-hole::after,
+.mole-mole:active::after {
   top: -8em;
   left: 3em;
   width: 4em;
@@ -1068,18 +1151,23 @@ input.book-page {
   background-color: #444f55;
   transform-origin: 2.5em 5.5em;
 }
-.mole-hole:active::before, .mole-hole:active::after,
-.mole-mole:active::before, .mole-mole:active::after {
+.mole-hole:active::before,
+.mole-hole:active::after,
+.mole-mole:active::before,
+.mole-mole:active::after {
   animation-name: hammer;
   animation-duration: 200ms;
 }
-.mole-hole:active::before, .mole-mole:active::before {
+.mole-hole:active::before,
+.mole-mole:active::before {
   top: -0.5em;
 }
-.mole-hole:active::after, .mole-mole:active::after {
+.mole-hole:active::after,
+.mole-mole:active::after {
   top: -2em;
 }
-.mole-hole + .mole-hole::before, .mole-hole + .mole-hole::after {
+.mole-hole + .mole-hole::before,
+.mole-hole + .mole-hole::after {
   display: block;
   left: -0.3em;
   width: 5.83em;
@@ -1099,10 +1187,13 @@ input.book-page {
   transform-origin: bottom left;
   animation-name: none;
 }
-.mole-hole-far-left, .mole-hole-center, .mole-hole-far-right {
+.mole-hole-far-left,
+.mole-hole-center,
+.mole-hole-far-right {
   top: 2.5em;
 }
-.mole-hole-center-left, .mole-hole-center-right {
+.mole-hole-center-left,
+.mole-hole-center-right {
   top: 1em;
 }
 .mole-hole-far-left {
@@ -1148,7 +1239,8 @@ input.book-page {
 .mole-mole-toggle:checked + .mole-mole {
   display: none;
 }
-.mole-mole::before, .mole-mole::after {
+.mole-mole::before,
+.mole-mole::after {
   transform: none;
 }
 .mole-mole::before {
@@ -1169,14 +1261,20 @@ input.book-page {
   background-color: #444f55;
   font-weight: bold;
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~
-.mole-hole-toggle:checked ~ .mole-loss-modal {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-loss-modal {
   display: block;
 }
-.mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~
-.mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~
-.mole-mole-toggle:checked ~ .mole-win-modal {
+.mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-win-modal {
   display: block;
 }
 .mole-score {
@@ -1211,94 +1309,266 @@ input.book-page {
 .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-score::after {
   content: '\2212 10';
 }
-.mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+30';
 }
-.mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+15';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '000';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-score::after {
   content: '\2212 15';
 }
-.mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+40';
 }
-.mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+25';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+10';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '\2212 05';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-score::after {
   content: '\2212 20';
 }
-.mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+50';
 }
-.mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+35';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+20';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+05';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '\2212 10';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-score::after {
   content: '\2212 25';
 }
-.mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+45';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+30';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+15';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '000';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '\2212 15';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+40';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+25';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+10';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '\2212 05';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+35';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+20';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+05';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+30';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+15';
 }
-.mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-hole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-mole-toggle:checked ~ .mole-score::after {
+.mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-hole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-mole-toggle:checked
+  ~ .mole-score::after {
   content: '+25';
 }
 .mole-help-button {
@@ -1376,7 +1646,8 @@ input.book-page {
     position: relative;
     width: 61em;
   }
-  #book.demo, #mole.demo {
+  #book.demo,
+  #mole.demo {
     position: absolute;
   }
   #book.demo {
@@ -1401,7 +1672,8 @@ input.book-page {
   #book.demo {
     position: static;
   }
-  #browser.demo, #mole.demo {
+  #browser.demo,
+  #mole.demo {
     position: absolute;
   }
   #browser.demo {
